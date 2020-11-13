@@ -66,14 +66,15 @@
         android:background="#00000000"
         android:text="="
         tools:layout_editor_absoluteX="317dp"
-        tools:layout_editor_absoluteY="670dp" />
+        tools:layout_editor_absoluteY="627dp" />
 
     <Button
         android:id="@+id/btnone"
         android:layout_width="230px"
         android:layout_height="230px"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_weight="1"
         android:background="#00000000"
         android:text="1"
@@ -84,8 +85,9 @@
         android:id="@+id/btnone4"
         android:layout_width="230px"
         android:layout_height="230px"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_weight="1"
         android:background="#00000000"
         android:text="4"
@@ -132,25 +134,25 @@
         android:id="@+id/btnone8"
         android:layout_width="230px"
         android:layout_height="230px"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_weight="1"
         android:background="#00000000"
         android:text="8"
         app:layout_constraintStart_toEndOf="@+id/btnone7"
-        tools:layout_editor_absoluteY="577dp" />
+        tools:layout_editor_absoluteY="539dp" />
 
     <Button
         android:id="@+id/btnone9"
         android:layout_width="230px"
         android:layout_height="230px"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_weight="1"
         android:background="#00000000"
         android:text="9"
         app:layout_constraintStart_toEndOf="@+id/btnone8"
-        tools:layout_editor_absoluteY="577dp" />
+        tools:layout_editor_absoluteY="539dp" />
 
     <Button
         android:id="@+id/btnone0"
@@ -160,7 +162,7 @@
         android:background="#00000000"
         android:text="0"
         tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="665dp" />
+        tools:layout_editor_absoluteY="627dp" />
 
     <Button
         android:id="@+id/btnone2"
