@@ -66,8 +66,8 @@
         android:id="@+id/btnone"
         android:layout_width="230px"
         android:layout_height="230px"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginBottom="4dp"
         android:layout_weight="1"
         android:background="#00000000"
@@ -197,5 +197,21 @@
         android:layout_height="wrap_content"
         android:text="Button"
         tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="671dp" />
+        tools:layout_editor_absoluteY="635dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="635dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="232dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
