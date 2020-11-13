@@ -8,11 +8,6 @@
     tools:context=".MainActivity">
 
     <TextView
-<<<<<<<<< Temporary merge branch 1
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="re ti les re"
-=========
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="55dp"
@@ -28,7 +23,6 @@
         android:textFontWeight="900"
         android:textSize="120px"
 
->>>>>>>>> Temporary merge branch 2
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -196,4 +190,12 @@
         android:text="-"
         app:layout_constraintBottom_toTopOf="@+id/btnplus3"
         tools:layout_editor_absoluteX="317dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="671dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
