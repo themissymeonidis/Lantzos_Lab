@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="ison">=</string>
+    <string name="sin">+</string>
+    <string name="tria">3</string>
+    <string name="duo">2</string>
+    <string name="oxtw">8</string>
+    <string name="plin">-</string>
+    <string name="pente">5</string>
+    <string name="eksi">6</string>
+    <string name="efta">7</string>
+    <string name="ena">1</string>
+    <string name="ennia">9</string>
+    <string name="tessera">4</string>
+    <string name="dia">/</string>
+    <string name="komma">.</string>
+    <string name="miden">0</string>
+    <string name="textview">TextView</string>
+    <string name="epi">x</string>
 </resources>
