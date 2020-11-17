@@ -234,10 +234,10 @@
 
     <Button
         android:id="@+id/button18"
-        android:layout_width="231dp"
-        android:layout_height="192dp"
-        android:text="backspace"
-        tools:layout_editor_absoluteX="904dp"
-        tools:layout_editor_absoluteY="1421dp" />
+        android:layout_width="210dp"
+        android:layout_height="113dp"
+        android:text="delete"
+        tools:layout_editor_absoluteX="907dp"
+        tools:layout_editor_absoluteY="1479dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
