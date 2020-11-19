@@ -27,7 +27,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:text="Home"
-                android:textSize="36sp"
+                android:textSize="37sp"
                 app:fontFamily="@font/baloo"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="76dp" />
