@@ -106,7 +106,7 @@
                             android:layout_height="83dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:background="#002D88"
+                            android:background="#8BA0CA"
                             app:srcCompat="@drawable/profile" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
