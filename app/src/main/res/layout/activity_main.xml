@@ -14,10 +14,10 @@
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="2dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/gradient"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
 
 
             <TextView
@@ -52,7 +52,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#C3B8B8"
+                        android:background="#9E1313"
                         android:visibility="visible"
                         tools:visibility="visible">
 
@@ -87,27 +87,27 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#3F51B5">
+                        android:background="#2CC688">
 
                         <TextView
                             android:id="@+id/textView4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/imageView3"
-                            android:layout_marginTop="-2dp"
+                            android:layout_below="@id/myprofile"
                             android:layout_centerHorizontal="true"
-                            android:text="Employees"
+                            android:layout_marginTop="-2dp"
+                            android:text="My profile"
                             android:textSize="24sp"
                             app:fontFamily="@font/aclonica" />
 
                         <ImageView
-                            android:id="@+id/imageView3"
+                            android:id="@+id/myprofile"
                             android:layout_width="69dp"
                             android:layout_height="83dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
                             android:background="#002D88"
-                            app:srcCompat="@drawable/download" />
+                            app:srcCompat="@drawable/profile" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -138,20 +138,20 @@
                             android:id="@+id/textView6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/Finance"
+                            android:layout_below="@id/todolist"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="9dp"
-                            android:text="Finance"
+                            android:text="TO DO LIST"
                             android:textSize="24sp"
                             app:fontFamily="@font/aclonica" />
 
                         <ImageView
-                            android:id="@+id/Finance"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:id="@+id/todolist"
+                            android:layout_width="104dp"
+                            android:layout_height="78dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/money" />
+                            app:srcCompat="@drawable/todo" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -170,20 +170,20 @@
                             android:id="@+id/textView7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/chat"
+                            android:layout_below="@id/salary"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:text="Chat"
+                            android:text="Salary"
                             android:textSize="24sp" />
 
                         <ImageView
-                            android:id="@+id/chat"
+                            android:id="@+id/salary"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
                             android:background="#FFFFFF"
-                            app:srcCompat="@drawable/chat" />
+                            app:srcCompat="@drawable/salary" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
