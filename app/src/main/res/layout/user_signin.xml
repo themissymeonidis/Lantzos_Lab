@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
     <TextView
         android:id="@+id/textView12"
@@ -14,62 +15,6 @@
         android:layout_marginTop="408dp"
         android:layout_marginBottom="1248dp"
         android:text="@string/sign_in_as_user"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="342dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="146dp"
-        android:layout_marginLeft="146dp"
-        android:layout_marginTop="733dp"
-        android:layout_marginBottom="795dp"
-        android:text="@string/password"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="818dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="146dp"
-        android:layout_marginLeft="146dp"
-        android:layout_marginTop="588dp"
-        android:layout_marginBottom="929dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="806dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="146dp"
-        android:layout_marginLeft="146dp"
-        android:layout_marginTop="797dp"
-        android:layout_marginBottom="726dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="342dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="146dp"
-        android:layout_marginLeft="146dp"
-        android:layout_marginTop="516dp"
-        android:layout_marginBottom="1012dp"
-        android:text="@string/e_mail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -113,4 +58,58 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="207dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="223dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log IN"
+        app:backgroundTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#EF0183"
+        tools:layout_editor_absoluteY="381dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="203dp"
+        android:layout_height="23dp"
+        android:text="Keep me signed in"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="290dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="103dp"
+        android:layout_height="42dp"
+        android:text="Sign In"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="39dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
