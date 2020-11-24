@@ -7,11 +7,12 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+        DatabaseHelper myDb;
         @Override
         public void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+            myDb = new DatabaseHelper(this);
 
         Button userlogin = (Button) findViewById(R.id.button);
 
