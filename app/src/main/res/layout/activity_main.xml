@@ -6,202 +6,38 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
-    <?xml version="1.0" encoding="utf-8"?>
-    <ScrollView
-        android:layout_width="416dp"
-        android:layout_height="730dp"
-        tools:context=".MainActivity"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="2dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradient"
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="146dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="5dp"
+        android:text="User"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="146dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="5dp"
+        android:text="Admin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="114dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:text="Home"
-                android:textSize="37sp"
-                app:fontFamily="@font/baloo"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="76dp" />
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="252dp"
+        android:layout_height="110dp"
+        android:text="Welcome"
+        android:textColor="#3F51B5"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="71dp" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="0dp"
-                android:layout_height="175dp"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="216dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#9E1313"
-                        android:visibility="visible"
-                        tools:visibility="visible">
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/calendar"
-
-                            android:layout_centerHorizontal="true"
-                            android:text="Calendar"
-                            android:textSize="25sp"
-                            app:fontFamily="@font/aclonica" />
-
-                        <ImageView
-                            android:id="@+id/calendar"
-                            android:layout_width="95dp"
-                            android:layout_height="66dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            android:background="#28D1B1"
-                            app:srcCompat="@drawable/calendar" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#2CC688">
-
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/myprofile"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="-2dp"
-                            android:text="My profile"
-                            android:textSize="24sp"
-                            app:fontFamily="@font/aclonica" />
-
-                        <ImageView
-                            android:id="@+id/myprofile"
-                            android:layout_width="69dp"
-                            android:layout_height="83dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            android:background="#8BA0CA"
-                            app:srcCompat="@drawable/profile" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="0dp"
-                android:layout_height="175dp"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#FFC107">
-
-                        <TextView
-                            android:id="@+id/textView6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/todolist"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="9dp"
-                            android:text="TO DO LIST"
-                            android:textSize="24sp"
-                            app:fontFamily="@font/aclonica" />
-
-                        <ImageView
-                            android:id="@+id/todolist"
-                            android:layout_width="104dp"
-                            android:layout_height="78dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/todo" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#E91E63">
-
-                        <TextView
-                            android:id="@+id/textView7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/salary"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
-                            android:text="Salary"
-                            android:textSize="24sp" />
-
-                        <ImageView
-                            android:id="@+id/salary"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            android:background="#FFFFFF"
-                            app:srcCompat="@drawable/salary" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="175dp"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView
-
-
-</RelativeLayout>
-    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

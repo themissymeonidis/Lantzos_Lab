@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
-    <?xml version="1.0" encoding="utf-8"?>
     <ScrollView
         android:layout_width="416dp"
         android:layout_height="730dp"
@@ -14,10 +13,7 @@
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="2dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradient"
+
 
 
     <TextView
@@ -28,7 +24,6 @@
         android:layout_marginLeft="16dp"
         android:text="Home"
         android:textSize="37sp"
-        app:fontFamily="@font/baloo"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="76dp" />
 
@@ -64,8 +59,7 @@
                     android:layout_marginTop="14dp"
                     android:layout_centerHorizontal="true"
                     android:text="Calendar"
-                    android:textSize="25sp"
-                    app:fontFamily="@font/aclonica" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/calendar"
@@ -97,8 +91,7 @@
                     android:layout_marginTop="-2dp"
                     android:layout_centerHorizontal="true"
                     android:text="Employees"
-                    android:textSize="24sp"
-                    app:fontFamily="@font/aclonica" />
+                    android:textSize="24sp" />
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -142,8 +135,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="9dp"
                     android:text="Finance"
-                    android:textSize="24sp"
-                    app:fontFamily="@font/aclonica" />
+                    android:textSize="24sp" />
 
                 <ImageView
                     android:id="@+id/Finance"
@@ -199,9 +191,6 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-
-        </RelativeLayout>
-    </LinearLayout>
