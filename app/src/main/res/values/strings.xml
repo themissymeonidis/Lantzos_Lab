@@ -15,4 +15,8 @@
     <string name="sing_up_as_administrator">Sing up as Administrator</string>
     <string name="administrator_key">Administrator Key:</string>
     <string name="sign_up_as_user">Sign up as User</string>
+    <string name="BACK1">BACK</string>
+    <string name="BACK2">BACK</string>
+    <string name="enter_item">Enter Item</string>
+    <string name="Add">add</string>
 </resources>

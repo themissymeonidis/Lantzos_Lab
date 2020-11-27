@@ -12,7 +12,8 @@
         android:layout_height="730dp"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="2dp">
+        tools:layout_editor_absoluteY="2dp"
+        tools:ignore="MissingConstraints">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,7 +31,8 @@
         android:textSize="37sp"
         app:fontFamily="@font/baloo"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="76dp" />
+        tools:layout_editor_absoluteY="76dp"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -41,7 +43,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="216dp">
+        tools:layout_editor_absoluteY="216dp"
+        tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
             android:layout_width="3dp"
@@ -200,7 +203,7 @@
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView
+    </ScrollView>
 
 
         </RelativeLayout>
