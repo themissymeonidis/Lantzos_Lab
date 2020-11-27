@@ -112,9 +112,9 @@
             android:layout_alignParentTop="false"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="146dp"
-            android:layout_marginRight="115dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="166dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="29dp"
             android:text="BACK" />
 
         <TextView

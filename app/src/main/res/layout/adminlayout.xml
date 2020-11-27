@@ -183,7 +183,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="#FFFFFF"
-                    app:srcCompat="@drawable/chat" />
+                    app:srcCompat="@android:drawable/sym_action_chat" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

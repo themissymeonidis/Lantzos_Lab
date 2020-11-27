@@ -25,8 +25,8 @@
         android:layout_width="96dp"
         android:layout_height="59dp"
         android:text="add"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="4dp" />
+        tools:layout_editor_absoluteX="299dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ListView
         android:id="@+id/items_list"
