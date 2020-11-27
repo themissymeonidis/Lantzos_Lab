@@ -12,25 +12,23 @@
         android:layout_height="730dp"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="2dp">
+        tools:layout_editor_absoluteY="2dp">>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Home"
+            android:textSize="37sp"
+            app:fontFamily="@font/baloo" />
+    </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradient"
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="114dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:text="Home"
-        android:textSize="37sp"
-        app:fontFamily="@font/baloo"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="76dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
