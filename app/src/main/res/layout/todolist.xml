@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.bradteachescode.todolist.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <EditText
+        android:id="@+id/item_edit_text"
+        android:layout_width="263dp"
+        android:layout_height="43dp"
+        android:background="#FFFFFF"
+        android:hint="Enter Item"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:text="add"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <ListView
+        android:id="@+id/items_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginBottom="228dp"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/items_list"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="326dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

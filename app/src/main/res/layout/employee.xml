@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="292dp"
+        android:layout_height="258dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <SearchView
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:background="#B61515"
+        tools:layout_editor_absoluteX="322dp"
+        tools:layout_editor_absoluteY="-7dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="327dp"
+        android:layout_height="63dp"
+        android:background="#3F51B5"
+        android:text="Search"
+        android:textSize="24sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
