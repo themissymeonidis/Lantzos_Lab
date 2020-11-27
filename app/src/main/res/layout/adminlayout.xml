@@ -21,7 +21,7 @@
             android:layout_marginLeft="16dp"
             android:text="Home"
             android:textSize="37sp"
-            app:fontFamily="@font/baloo" />
+            />
     </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,7 +63,7 @@
                     android:layout_centerHorizontal="true"
                     android:text="Calendar"
                     android:textSize="25sp"
-                    app:fontFamily="@font/aclonica" />
+                     />
 
                 <ImageView
                     android:id="@+id/calendar"
@@ -96,7 +96,7 @@
                     android:layout_centerHorizontal="true"
                     android:text="Employees"
                     android:textSize="24sp"
-                    app:fontFamily="@font/aclonica" />
+                     />
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -141,7 +141,7 @@
                     android:layout_marginTop="9dp"
                     android:text="Finance"
                     android:textSize="24sp"
-                    app:fontFamily="@font/aclonica" />
+                     />
 
                 <ImageView
                     android:id="@+id/Finance"
