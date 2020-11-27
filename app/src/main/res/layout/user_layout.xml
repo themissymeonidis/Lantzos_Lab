@@ -6,19 +6,18 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
-    <?xml version="1.0" encoding="utf-8"?>
     <ScrollView
         android:layout_width="416dp"
         android:layout_height="730dp"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="2dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient"
+        android:background="@drawable/gradient" />
 
 
     <TextView
@@ -203,8 +202,3 @@
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-
-
-        </RelativeLayout>
-    </LinearLayout>

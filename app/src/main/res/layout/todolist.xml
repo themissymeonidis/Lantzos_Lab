@@ -25,12 +25,12 @@
 
     <Button
         android:id="@+id/add_btn"
-        android:layout_width="96dp"
-        android:layout_height="59dp"
+        android:layout_width="102dp"
+        android:layout_height="52dp"
         android:text="@string/Add"
-        tools:layout_editor_absoluteX="299dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ListView
         android:id="@+id/items_list"
@@ -66,4 +66,3 @@
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>

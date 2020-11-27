@@ -19,7 +19,11 @@ public class MainActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            Button userlogin = (Button) findViewById(R.id.button);
+            Button userlogin = (Button) findViewById(R.id.user_login_btn);
+            Button usersignup = (Button) findViewById(R.id.user_signup_btn);
+            Button adminlogin = (Button) findViewById(R.id.admin_login_btn);
+            Button adminsignup = (Button) findViewById(R.id.admin_signup_btn);
+
 
             userlogin.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -27,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            Button adminlogin = (Button) findViewById(R.id.button3);
 
             adminlogin.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -35,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            Button usersignup = (Button) findViewById(R.id.button4);
 
             usersignup.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -43,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            Button adminsignup = (Button) findViewById(R.id.button6);
 
             adminsignup.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
             BACK.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
+
                     onBackPressed();
                 }
             });
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
             BACK.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
+
                     onBackPressed();
                 }
             });
@@ -81,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
             imm.showSoftInput(yourEditText, InputMethodManager.SHOW_IMPLICIT);
 
 
-
             ArrayList<String> ArLi = null;
             ArrayAdapter<String> ArAd = new ArrayAdapter<String>(this, R.layout.todolist, ArLi);
             ArLi = new ArrayList<String>();
@@ -90,11 +92,11 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<String> finalArLi = ArLi;
             Add.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    String StInput = EditText.getText().toString();
+                    String StInput = yourEditText.getText().toString();
                     if (StInput != null && StInput.length() > 0) {
                         finalArLi.add(StInput);
                         ArAd.notifyDataSetChanged();
-                        EditText.setText(Integer.parseInt(""));
+                        yourEditText.setText(Integer.parseInt(""));
                     } else {
                         //EditText is blank
                     }
