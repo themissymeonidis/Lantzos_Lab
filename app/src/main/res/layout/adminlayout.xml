@@ -173,7 +173,7 @@
                     android:layout_below="@id/chat"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="Chat"
+                    android:text="TO DO LIST"
                     android:textSize="24sp" />
 
                 <ImageView
@@ -183,7 +183,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="#FFFFFF"
-                    app:srcCompat="@android:drawable/sym_action_chat" />
+                    app:srcCompat="@drawable/todo" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
