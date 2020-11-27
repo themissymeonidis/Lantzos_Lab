@@ -35,7 +35,8 @@
                 android:background="@drawable/profile"
                 android:padding="3dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_user" />
+                android:src="@drawable/ic_user"
+                android:tint="#780F0F" />
 
         </RelativeLayout>
 
@@ -111,9 +112,9 @@
             android:layout_alignParentTop="false"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="131dp"
-            android:layout_marginRight="130dp"
-            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="146dp"
+            android:layout_marginRight="115dp"
+            android:layout_marginBottom="32dp"
             android:text="BACK" />
 
         <TextView
