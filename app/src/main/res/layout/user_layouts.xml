@@ -11,23 +11,26 @@
         android:id="@+id/button16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USER SIGN IN"
+        android:text="@string/user_sign_in"
         tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="300dp" />
+        tools:layout_editor_absoluteY="300dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USER SIGN UP"
+        android:text="@string/user_sign_up"
         tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="300dp" />
+        tools:layout_editor_absoluteY="300dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BACK"
+        android:text="@string/back"
         tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="398dp" />
+        tools:layout_editor_absoluteY="398dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

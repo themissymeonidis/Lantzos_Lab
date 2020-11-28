@@ -9,106 +9,94 @@
         android:id="@+id/textView9"
         android:layout_width="200dp"
         android:layout_height="39dp"
-        android:text="Admin Sign In"
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginRight="106dp"
+        android:layout_marginBottom="522dp"
+        android:text="@string/admin_signin"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="42dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log IN"
+        android:layout_marginStart="162dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginTop="381dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="174dp"
+        android:text="@string/log_in"
         app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:rippleColor="#EF0183"
-        tools:layout_editor_absoluteY="381dp" />
+        tools:ignore="MissingConstraints" />
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="203dp"
         android:layout_height="23dp"
-        android:text="Keep me signed in"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="290dp" />
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
+        android:layout_marginBottom="290dp"
+        android:text="@string/keep_me_signed_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="217dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="223dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="335dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password1"
         android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="223dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="207dp"
         android:layout_height="39dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginRight="104dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginLeft="101dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginRight="103dp"
+        android:layout_marginBottom="404dp"
         android:ems="10"
-        android:hint="E-mail"
+        android:hint="@string/e_mail1"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="160dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="269dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="260dp"
-        android:layout_marginLeft="260dp"
-        android:layout_marginTop="1411dp"
-        android:layout_marginBottom="141dp"
-        android:text="@string/not_a_member"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:importantForAutofill="no" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="154dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="472dp"
-        android:layout_marginLeft="472dp"
-        android:layout_marginTop="933dp"
-        android:layout_marginBottom="582dp"
-        android:text="@string/sign_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="583dp"
-        android:layout_marginLeft="583dp"
-        android:layout_marginTop="1411dp"
-        android:layout_marginBottom="133dp"
-        android:text="@string/sign_up"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="318dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="488dp"
-        android:layout_marginLeft="488dp"
-        android:layout_marginTop="408dp"
-        android:layout_marginBottom="1248dp"
-        android:text="@string/sign_in_as_administrator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
