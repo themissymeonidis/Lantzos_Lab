@@ -9,6 +9,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -101,6 +102,54 @@ public class MainActivity extends AppCompatActivity {
                         //EditText is blank
                     }
                 }
+            });
+
+            RelativeLayout relativeclick1 =(RelativeLayout)findViewById(R.id.relative1);
+            relativeclick1.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View v) {setContentView(R.layout.calendar);
+                };
+            });
+
+            RelativeLayout relativeclick2 =(RelativeLayout)findViewById(R.id.relative2);
+            relativeclick2.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View v) {setContentView(R.layout.employee);
+                };
+            });
+
+            RelativeLayout relativeclick3 =(RelativeLayout)findViewById(R.id.relative3);
+            relativeclick3.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View v) {setContentView(R.layout.finance);
+                };
+            });
+
+            RelativeLayout relativeclick4 =(RelativeLayout)findViewById(R.id.relative4);
+            relativeclick4.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View v) {setContentView(R.layout.todolist);
+                };
+            });
+
+            RelativeLayout relativeclick5 =(RelativeLayout)findViewById(R.id.relative5);
+            relativeclick5.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View v) {setContentView(R.layout.calendar);
+                };
+            });
+
+            RelativeLayout relativeclick6 =(RelativeLayout)findViewById(R.id.relative6);
+            relativeclick6.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View v) {setContentView(R.layout.userprofile);
+                };
+            });
+
+            RelativeLayout relativeclick7 =(RelativeLayout)findViewById(R.id.relative7);
+            relativeclick7.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View v) {setContentView(R.layout.todolist);
+                };
+            });
+
+            RelativeLayout relativeclick8 =(RelativeLayout)findViewById(R.id.relative8);
+            relativeclick8.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View v) {setContentView(R.layout.salary);
+                };
             });
         }
 }
