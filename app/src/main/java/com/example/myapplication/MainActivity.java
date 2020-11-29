@@ -28,28 +28,28 @@ public class MainActivity extends AppCompatActivity {
 
             userlogin.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    setContentView(R.layout.user_signin);
+                    setContentView(R.layout.activity_user_login);
                 }
             });
 
 
             adminlogin.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    setContentView(R.layout.admin_signin);
+                    setContentView(R.layout.activity_admin_login);
                 }
             });
 
 
             usersignup.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    setContentView(R.layout.user_signup);
+                    setContentView(R.layout.activity_user_register);
                 }
             });
 
 
             adminsignup.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    setContentView(R.layout.admin_signup);
+                    setContentView(R.layout.activity_admin_register);
                 }
             });
 
