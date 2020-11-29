@@ -14,7 +14,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginBottom="40dp"
-        android:text="User Login"
+        android:text="@string/user_login"
         app:layout_constraintBottom_toTopOf="@+id/user_signup_btn"
         app:layout_constraintEnd_toStartOf="@+id/admin_login_btn"
         app:layout_constraintHorizontal_bias="0.3"
@@ -27,7 +27,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginBottom="72dp"
-        android:text="User Signup"
+        android:text="@string/user_signup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/admin_signup_btn"
         app:layout_constraintHorizontal_bias="0.3"
@@ -40,7 +40,7 @@
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="40dp"
-        android:text="Admin Login"
+        android:text="@string/admin_login"
         app:layout_constraintBottom_toTopOf="@+id/admin_signup_btn"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -51,7 +51,7 @@
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="72dp"
-        android:text="admin signup"
+        android:text="@string/adminsignup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -60,7 +60,7 @@
         android:layout_width="252dp"
         android:layout_height="110dp"
         android:layout_marginTop="60dp"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:textColor="#3F51B5"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
