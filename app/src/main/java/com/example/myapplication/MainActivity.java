@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
             Button usersignup = (Button) findViewById(R.id.user_signup_btn);
             Button adminlogin = (Button) findViewById(R.id.admin_login_btn);
             Button adminsignup = (Button) findViewById(R.id.admin_signup_btn);
+            RelativeLayout relativeclic1 =(RelativeLayout)findViewById(R.id.calendar_admin);
 
 
             userlogin.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+            relativeclic1.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    startActivity(new Intent(getApplicationContext(),AdminCalendar.class));
+                }
+            });
 
 
         }

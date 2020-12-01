@@ -74,4 +74,12 @@
     <string name="adminsignup">admin signup</string>
     <string name="welcome">Welcome</string>
     <string name="admin_login">Admin Login</string>
+    <string name="sign_up_AdminL">Sign Up</string>
+    <string name="Sing_Up_UserL">Sign Up</string>
+    <string name="i_m_not_a_robotUSU">I\'m not a Robot</string>
+    <string name="e_mailUSU">E-mail</string>
+    <string name="re_enter_passwordUSU">Re-enter Password</string>
+    <string name="passwordUSU">Password</string>
+    <string name="sign_upUSU">Sign Up</string>
+    <string name="deleteTODO">DELETE</string>
 </resources>
