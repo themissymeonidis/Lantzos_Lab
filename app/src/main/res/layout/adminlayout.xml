@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
+
     <ScrollView
         android:layout_width="416dp"
         android:layout_height="730dp"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="2dp">
+        tools:layout_editor_absoluteY="2dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView"
@@ -23,6 +25,14 @@
             android:textSize="37sp"
             />
     </ScrollView>
+
+    <Button
+        android:id="@+id/Alogout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="logout"
+        tools:layout_editor_absoluteY="6dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -196,9 +206,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

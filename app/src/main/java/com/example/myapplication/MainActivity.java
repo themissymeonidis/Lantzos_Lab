@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
             userlogin.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    setContentView(R.layout.activity_user_login);
+
+                    startActivity(new Intent(getApplicationContext(),UserLogin.class));
                 }
             });
 

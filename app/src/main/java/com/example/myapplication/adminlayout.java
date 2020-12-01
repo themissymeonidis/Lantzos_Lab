@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class adminlayout extends AppCompatActivity {
 
+
     EditText mEmail,mPassword,mReEnterPassword;
     Button mSignUpBtn;
     FirebaseAuth fAuth;
@@ -27,6 +28,19 @@ public class adminlayout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.adminlayout);
+
+        Button logout = (Button) findViewById(R.id.Alogout_btn);
+        fAuth = FirebaseAuth.getInstance();
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class)); //Go back to home page
+                    finish();
+
+            }
+        });
 
 
     }

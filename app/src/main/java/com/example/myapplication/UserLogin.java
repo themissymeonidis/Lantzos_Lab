@@ -33,7 +33,7 @@ public class UserLogin extends AppCompatActivity {
         mPassword = findViewById(R.id.Password1);
 
         fAuth = FirebaseAuth.getInstance();
-        mLoginBtn = findViewById(R.id.user_login_btn);
+        mLoginBtn = findViewById(R.id.button20);
 
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +64,7 @@ public class UserLogin extends AppCompatActivity {
 
                         if(task.isSuccessful()) {
                             Toast.makeText(UserLogin.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), userlayout.class));
 
                         }else{
                             Toast.makeText(UserLogin.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

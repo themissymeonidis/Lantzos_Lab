@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.526" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/button20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log IN"
@@ -42,7 +42,7 @@
         android:layout_height="23dp"
         android:text="Keep me signed in"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button11"
+        app:layout_constraintBottom_toTopOf="@+id/button20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
