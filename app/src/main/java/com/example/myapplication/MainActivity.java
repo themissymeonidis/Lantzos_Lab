@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             adminlogin.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    startActivity(new Intent(MainActivity.this, AdminLogin.class));
+                    startActivity(new Intent(getApplicationContext(),AdminLogin.class));
                 }
             });
 
@@ -50,23 +50,9 @@ public class MainActivity extends AppCompatActivity {
 
             adminsignup.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-
-                    startActivity(new Intent(MainActivity.this, AdminRegister.class));
+                    startActivity(new Intent(getApplicationContext(),AdminRegister.class));
                 }
             });
-
-
-
-            EditText yourEditText = (EditText) findViewById(R.id.item_edit_text);
-
-
-
-            ArrayList<String> ArLi = null;
-            ArrayAdapter<String> ArAd = new ArrayAdapter<String>(this, R.layout.todolist, ArLi);
-            ArLi = new ArrayList<String>();
-            Button Add = (Button) findViewById(R.id.add_btn);
-
-            ArrayList<String> finalArLi = ArLi;
 
 
 

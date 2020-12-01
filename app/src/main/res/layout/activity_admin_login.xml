@@ -5,76 +5,69 @@
     android:layout_width="match_parent"
     android:background="@drawable/gradient"
     android:layout_height="match_parent">
-    tools:context=".AdminLogin">
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="200dp"
         android:layout_height="39dp"
+        android:layout_marginTop="50dp"
         android:text="Admin Sign In"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Email1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
         android:text="Log IN"
         android:textStyle="bold"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85"
         app:rippleColor="#EF0183" />
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="203dp"
         android:layout_height="23dp"
+        android:layout_marginBottom="50dp"
         android:text="Keep me signed in"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/Password1"
+        android:id="@+id/editTextTextPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/checkBox2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65999997" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/Email1"
+        android:id="@+id/editTextTextPersonName2"
         android:layout_width="207dp"
         android:layout_height="39dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Password1"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
