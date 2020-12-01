@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient">
-
+    android:background="@drawable/gradient"
+    tools:context="name">
 
     <RelativeLayout
         android:id="@+id/rellay1"
@@ -31,7 +33,6 @@
                 android:layout_marginBottom="9dp"
                 android:adjustViewBounds="true"
                 android:background="@drawable/profile"
-                android:contentDescription="@string/pic"
                 android:padding="3dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_user"
@@ -47,9 +48,10 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15sp"
             android:fontFamily="sans-serif-light"
-            android:text="@string/my_profile"
+            android:text="My profile"
             android:textColor="@color/black"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
 
         <TextView
@@ -70,11 +72,8 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
             android:adjustViewBounds="true"
-            android:contentDescription="@string/imj"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_settings"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="15dp" />
+            android:src="@drawable/ic_settings" />
 
     </RelativeLayout>
 
@@ -91,6 +90,21 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/linlay1">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
         <Button
             android:id="@+id/button9"
             android:layout_width="142dp"
@@ -102,19 +116,16 @@
             android:layout_marginLeft="166dp"
             android:layout_marginRight="95dp"
             android:layout_marginBottom="29dp"
-            android:text="@string/back"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="166dp"
-            android:layout_marginEnd="95dp" />
+            android:text="BACK" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#009688"
-            android:text="@string/email1"
+            android:text="Email"
             android:textColor="#000000"
-            android:textSize="13sp" />
+            android:textSize="13sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -127,13 +138,9 @@
             android:layout_marginTop="18dp"
             android:layout_marginRight="0dp"
             android:layout_marginBottom="265dp"
-            android:background="#4CAF50"
+            android:background="#8C9A8C"
             android:longClickable="false"
-            android:orientation="vertical"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="-3dp"
-            android:layout_marginEnd="0dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -149,8 +156,7 @@
                 android:layout_marginLeft="13dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="125dp"
-                android:background="@color/grey"
-                android:layout_marginEnd="125dp" />
+                android:background="@color/grey" />
 
         </LinearLayout>
 
@@ -165,20 +171,17 @@
             android:layout_marginTop="138dp"
             android:layout_marginRight="-1dp"
             android:layout_marginBottom="130dp"
-            android:background="#4CAF50"
-            android:orientation="vertical"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="-1dp">
+            android:background="#8C9A8C"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#009688"
-                android:text="@string/phone"
+                android:text="Phone"
                 android:textColor="#000000"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -194,7 +197,7 @@
                 android:background="@color/grey" />
 
         </LinearLayout>
-
+        android:constraintBottom_toBotoom_of="parent"
 
 
     </RelativeLayout>

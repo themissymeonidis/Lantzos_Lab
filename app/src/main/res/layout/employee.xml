@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/gradient">
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent">
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -15,30 +14,18 @@
         tools:layout_editor_absoluteY="106dp" />
 
     <SearchView
-        android:layout_width="89dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="311dp"
-        android:layout_marginLeft="311dp"
-        android:layout_marginBottom="538dp"
-        android:background="#B61515"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="109dp"
+        android:layout_height="71dp"
+        android:background="#859395"
+        tools:layout_editor_absoluteX="322dp"
+        tools:layout_editor_absoluteY="-7dp" />
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="315dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginRight="84dp"
-        android:layout_marginBottom="540dp"
-        android:background="#3F51B5"
-        android:text="@string/search"
-        android:textIsSelectable="true"
+        android:layout_width="327dp"
+        android:layout_height="63dp"
+        android:background="#157381"
+        android:text="Search"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 </androidx.constraintlayout.widget.ConstraintLayout>

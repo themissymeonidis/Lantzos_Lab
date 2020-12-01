@@ -4,7 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserLogin">
+    android:background="@drawable/gradient"
+    >
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="318dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="472dp"
+        android:layout_marginLeft="472dp"
+        android:layout_marginTop="408dp"
+        android:layout_marginBottom="1248dp"
+        android:text="@string/sign_in_as_user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
@@ -47,88 +61,69 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/editTextTextPersonName3"
         android:layout_width="207dp"
         android:layout_height="39dp"
-        android:layout_marginTop="135dp"
-        android:layout_marginBottom="429dp"
-        android:autofillHints=""
+        android:layout_marginBottom="20dp"
         android:ems="10"
-        android:hint="@string/e_mail"
-        android:inputType="textWebEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="203dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="264dp"
-        android:text="@string/keep_me_signed_in"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/editTextTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="202dp"
-        android:layout_marginBottom="351dp"
-        android:autofillHints=""
+        android:layout_marginBottom="20dp"
         android:ems="10"
-        android:hint="@string/password"
+        android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_in"
-        app:backgroundTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Log IN"
+        app:backgroundTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#EF0183"
+        tools:layout_editor_absoluteY="431dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="203dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="80dp"
+        android:text="Keep me signed in"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        tools:layout_editor_absoluteX="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661"
-        app:rippleColor="#EF0183" />
+        />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="103dp"
         android:layout_height="42dp"
         android:layout_marginTop="60dp"
-        android:text="@string/signin"
+        android:layout_marginBottom="100dp"
+        android:text="Sign In"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="469dp"
-        android:layout_marginBottom="86dp"
-        android:background="#FFFFFF"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

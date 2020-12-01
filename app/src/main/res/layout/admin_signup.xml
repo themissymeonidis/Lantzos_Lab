@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="200dp"
+        android:layout_height="39dp"
+        android:text="Admin Sign Up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textStyle="bold"
+        app:backgroundTint="#000000"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:text="I'm not a Robot"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="338dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint=" Re-enter Password"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="219dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="153dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="342dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="733dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/administrator_key"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.293" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="318dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="404dp"
+        android:layout_marginLeft="404dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="1248dp"
+        android:text="@string/sing_up_as_administrator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="338dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginLeft="134dp"
+        android:layout_marginTop="278dp"
+        android:layout_marginBottom="1163dp"
+        android:text="@string/username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="154dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="448dp"
+        android:layout_marginLeft="448dp"
+        android:layout_marginTop="933dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.417" />
+</androidx.constraintlayout.widget.ConstraintLayout>

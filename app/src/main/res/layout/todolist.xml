@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
+    tools:context="com.bradteachescode.todolist.MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
 
@@ -50,6 +51,7 @@
         android:layout_marginTop="164dp"
         android:layout_marginBottom="228dp"
         android:text="@string/BACK2"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/items_list"
@@ -59,9 +61,10 @@
         android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/delete"
+        android:text="DELETE"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="326dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="326dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

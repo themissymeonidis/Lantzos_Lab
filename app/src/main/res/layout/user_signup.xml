@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="117dp"
+        android:layout_height="43dp"
+        android:text="Sign Up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint=" Re-enter Password"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="219dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        app:backgroundTint="#000000"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:text="I'm not a Robot"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="338dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
