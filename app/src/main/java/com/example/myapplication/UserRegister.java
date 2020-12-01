@@ -35,7 +35,7 @@ public class UserRegister extends AppCompatActivity {
         mSignUpBtn = findViewById(R.id.user_signup_btn);
 
         fAuth = FirebaseAuth.getInstance();
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar2);
 
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));

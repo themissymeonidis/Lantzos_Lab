@@ -31,7 +31,7 @@ public class AdminLogin extends AppCompatActivity {
 
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.Password);
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar2);
         fAuth = FirebaseAuth.getInstance();
         mLoginBtn = findViewById(R.id.admin_login_btn);
 

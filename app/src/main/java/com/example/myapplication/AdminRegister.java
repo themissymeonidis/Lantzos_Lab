@@ -35,7 +35,7 @@ public class AdminRegister extends AppCompatActivity {
         mSignUpBtn = findViewById(R.id.admin_signup_btn);
 
         fAuth = FirebaseAuth.getInstance();
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar3);
 
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
