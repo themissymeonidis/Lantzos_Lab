@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,6 +29,7 @@ public class adminlayout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.adminlayout);
+        RelativeLayout relativeclick1 =(RelativeLayout)findViewById(R.id.calendar_admin);
 
         Button logout = (Button) findViewById(R.id.Alogout_btn);
         fAuth = FirebaseAuth.getInstance();
@@ -39,6 +41,13 @@ public class adminlayout extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(),MainActivity.class)); //Go back to home page
                     finish();
 
+            }
+        });
+
+        relativeclick1.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+                startActivity(new Intent(getApplicationContext(),AdminCalendar.class));
             }
         });
 

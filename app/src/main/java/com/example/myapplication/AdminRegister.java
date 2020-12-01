@@ -12,16 +12,28 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.rpc.context.AttributeContext;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class AdminRegister extends AppCompatActivity {
 
     EditText mEmail,mPassword,mReEnterPassword;
     Button mSignUpBtn;
     FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
     private FirebaseAuth mAuth;
+
+    Boolean valid = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +46,8 @@ public class AdminRegister extends AppCompatActivity {
         mSignUpBtn = findViewById(R.id.button12);
 
         fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
@@ -62,20 +76,29 @@ public class AdminRegister extends AppCompatActivity {
                     mPassword.setError("password must be more than 8 characters");
                     return;
                 }
-
-                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                if(valid){
+                fAuth.createUserWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(AdminRegister.this, "Profile Created", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),adminlayout.class));
-                        }
-                        else{
-                            Toast.makeText(AdminRegister.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
+                    public void onSuccess(AuthResult authResult) {
+
+                        FirebaseUser Admin = fAuth.getCurrentUser();
+                        Toast.makeText(AdminRegister.this, "Profile Created", Toast.LENGTH_SHORT).show();
+                        DocumentReference documentReference = fStore.collection("Users").document(Admin.getUid());
+                        Map<String, Object> userInfo = new HashMap<>();
+                        userInfo.put("UserEmail", mEmail.getText().toString());
+                        // specify if the user is admin
+                        userInfo.put("isUser", "1");
+                        startActivity(new Intent(getApplicationContext(), adminlayout.class));
+                    }
+
+
+                  }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
 
                     }
                 });
+                }
             }
         });
 
