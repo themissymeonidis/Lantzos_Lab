@@ -29,13 +29,13 @@ public class AdminLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
 
-        mEmail = findViewById(R.id.Email);
-        mPassword = findViewById(R.id.Password);
-        progressBar = findViewById(R.id.progressBar2);
+        mEmail = findViewById(R.id.Email1);
+        mPassword = findViewById(R.id.Password1);
         fAuth = FirebaseAuth.getInstance();
-        mLoginBtn = findViewById(R.id.admin_login_btn);
+        mLoginBtn = findViewById(R.id.button11);
 
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 String email = mEmail.getText().toString().trim();
@@ -56,7 +56,7 @@ public class AdminLogin extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
+
 
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -64,7 +64,7 @@ public class AdminLogin extends AppCompatActivity {
 
                         if(task.isSuccessful()) {
                             Toast.makeText(AdminLogin.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
                         }else{
                             Toast.makeText(AdminLogin.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

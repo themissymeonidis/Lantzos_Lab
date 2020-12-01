@@ -29,9 +29,9 @@ public class UserLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
 
-        mEmail = findViewById(R.id.Email);
-        mPassword = findViewById(R.id.Password);
-        progressBar = findViewById(R.id.progressBar2);
+        mEmail = findViewById(R.id.Email1);
+        mPassword = findViewById(R.id.Password1);
+
         fAuth = FirebaseAuth.getInstance();
         mLoginBtn = findViewById(R.id.user_login_btn);
 
@@ -56,7 +56,7 @@ public class UserLogin extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
+
 
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override

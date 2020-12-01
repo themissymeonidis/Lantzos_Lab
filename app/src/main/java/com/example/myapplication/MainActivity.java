@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             adminlogin.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    setContentView(R.layout.activity_admin_login);
+                    startActivity(new Intent(MainActivity.this, AdminLogin.class));
                 }
             });
 
@@ -49,40 +50,15 @@ public class MainActivity extends AppCompatActivity {
 
             adminsignup.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    setContentView(R.layout.activity_admin_register);
+
+                    startActivity(new Intent(MainActivity.this, AdminRegister.class));
                 }
             });
 
-            Button BACK = (Button) findViewById(R.id.button9);
 
-            BACK.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-
-                    onBackPressed();
-                }
-            });
-
-            Button BACK1 = (Button) findViewById(R.id.button10);
-
-            BACK.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-
-                    onBackPressed();
-                }
-            });
-
-            Button BACK2 = (Button) findViewById(R.id.button10);
-
-            BACK.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    onBackPressed();
-                }
-            });
 
             EditText yourEditText = (EditText) findViewById(R.id.item_edit_text);
-            yourEditText.requestFocus();
-            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.showSoftInput(yourEditText, InputMethodManager.SHOW_IMPLICIT);
+
 
 
             ArrayList<String> ArLi = null;
@@ -91,18 +67,7 @@ public class MainActivity extends AppCompatActivity {
             Button Add = (Button) findViewById(R.id.add_btn);
 
             ArrayList<String> finalArLi = ArLi;
-            Add.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    String StInput = yourEditText.getText().toString();
-                    if (StInput != null && StInput.length() > 0) {
-                        finalArLi.add(StInput);
-                        ArAd.notifyDataSetChanged();
-                        yourEditText.setText(Integer.parseInt(""));
-                    } else {
-                        //EditText is blank
-                    }
-                }
-            });
+
 
 
         }

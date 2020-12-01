@@ -29,13 +29,13 @@ public class UserRegister extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_register);
 
-        mEmail = findViewById(R.id.Email);
-        mPassword = findViewById(R.id.Password);
+        mEmail = findViewById(R.id.Email1);
+        mPassword = findViewById(R.id.Password1);
         mReEnterPassword = findViewById(R.id.Rpassword);
         mSignUpBtn = findViewById(R.id.user_signup_btn);
 
         fAuth = FirebaseAuth.getInstance();
-        progressBar = findViewById(R.id.progressBar2);
+
 
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
@@ -65,7 +65,7 @@ public class UserRegister extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
+
 
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
