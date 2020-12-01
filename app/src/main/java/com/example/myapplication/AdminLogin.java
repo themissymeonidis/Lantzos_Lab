@@ -28,8 +28,8 @@ public class AdminLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
 
-        mEmail = findViewById(R.id.editTextTextPersonName2);
-        mPassword = findViewById(R.id.editTextTextPassword2);
+        mEmail = findViewById(R.id.Email2);
+        mPassword = findViewById(R.id.Password2);
         fAuth = FirebaseAuth.getInstance();
         mLoginBtn = findViewById(R.id.button11);
 
