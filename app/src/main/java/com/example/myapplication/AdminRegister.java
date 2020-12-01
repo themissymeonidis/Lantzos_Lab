@@ -21,7 +21,6 @@ public class AdminRegister extends AppCompatActivity {
     EditText mEmail,mPassword,mReEnterPassword;
     Button mSignUpBtn;
     FirebaseAuth fAuth;
-    ProgressBar progressBar;
     private FirebaseAuth mAuth;
 
     @Override
@@ -32,10 +31,9 @@ public class AdminRegister extends AppCompatActivity {
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.Password);
         mReEnterPassword = findViewById(R.id.Rpassword);
-        mSignUpBtn = findViewById(R.id.admin_signup_btn);
+        mSignUpBtn = findViewById(R.id.button12);
 
         fAuth = FirebaseAuth.getInstance();
-        progressBar = findViewById(R.id.progressBar3);
 
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
@@ -65,14 +63,12 @@ public class AdminRegister extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
-
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(AdminRegister.this, "Profile Created", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(),adminlayout.class));
                         }
                         else{
                             Toast.makeText(AdminRegister.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
