@@ -6,19 +6,18 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
-    <?xml version="1.0" encoding="utf-8"?>
     <ScrollView
         android:layout_width="416dp"
         android:layout_height="730dp"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="2dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient"
+        android:background="@drawable/gradient" />
 
 
     <TextView
@@ -55,7 +54,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#9E1313"
+                android:background="#057381"
                 android:visibility="visible"
                 tools:visibility="visible">
 
@@ -90,7 +89,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#2CC688">
+                android:background="#057381">
 
                 <TextView
                     android:id="@+id/textView4"
@@ -135,7 +134,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FFC107">
+                android:background="#057381">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -167,7 +166,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#E91E63">
+                android:background="#057381">
 
                 <TextView
                     android:id="@+id/textView7"
@@ -203,8 +202,3 @@
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-
-
-        </RelativeLayout>
-    </LinearLayout>

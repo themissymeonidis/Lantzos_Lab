@@ -25,12 +25,12 @@
 
     <Button
         android:id="@+id/add_btn"
-        android:layout_width="96dp"
-        android:layout_height="59dp"
+        android:layout_width="102dp"
+        android:layout_height="52dp"
         android:text="@string/Add"
-        tools:layout_editor_absoluteX="299dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ListView
         android:id="@+id/items_list"
@@ -51,6 +51,7 @@
         android:layout_marginTop="164dp"
         android:layout_marginBottom="228dp"
         android:text="@string/BACK2"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/items_list"
@@ -61,9 +62,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DELETE"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="326dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="326dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>

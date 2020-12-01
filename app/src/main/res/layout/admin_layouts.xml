@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADMIN SIGN IN"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="300dp" />
 
@@ -20,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADMIN SIGN UP"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="234dp"
         tools:layout_editor_absoluteY="300dp" />
 
@@ -28,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BACK"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="398dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

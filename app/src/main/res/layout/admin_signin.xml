@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/gradient"
     android:layout_height="match_parent">
 
     <TextView
@@ -12,6 +13,7 @@
         android:text="Admin Sign In"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="30sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="105dp"
         tools:layout_editor_absoluteY="42dp" />
 
@@ -20,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log IN"
+        android:textStyle="bold"
         app:backgroundTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +34,7 @@
         android:layout_width="203dp"
         android:layout_height="23dp"
         android:text="Keep me signed in"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="290dp" />
 
@@ -41,6 +45,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,6 +60,7 @@
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textPersonName"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="160dp" />
 

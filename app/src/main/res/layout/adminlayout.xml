@@ -13,24 +13,22 @@
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="2dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Home"
+            android:textSize="37sp"
+            />
+    </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradient"
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="114dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:text="Home"
-        android:textSize="37sp"
-        app:fontFamily="@font/baloo"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="76dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -52,7 +50,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#C3B8B8"
+                android:background="#157381"
                 android:visibility="visible"
                 tools:visibility="visible">
 
@@ -61,11 +59,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/calendar"
-                    android:layout_marginTop="14dp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp"
                     android:text="Calendar"
                     android:textSize="25sp"
-                    app:fontFamily="@font/aclonica" />
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/calendar"
@@ -87,18 +85,18 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#3F51B5">
+                android:background="#157381">
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/imageView3"
-                    android:layout_marginTop="-2dp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-2dp"
                     android:text="Employees"
                     android:textSize="24sp"
-                    app:fontFamily="@font/aclonica" />
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -132,7 +130,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FFC107">
+                android:background="#157381">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -143,7 +141,7 @@
                     android:layout_marginTop="9dp"
                     android:text="Finance"
                     android:textSize="24sp"
-                    app:fontFamily="@font/aclonica" />
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/Finance"
@@ -164,7 +162,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#E91E63">
+                android:background="#157381">
 
                 <TextView
                     android:id="@+id/textView7"
@@ -174,7 +172,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="TO DO LIST"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/chat"
