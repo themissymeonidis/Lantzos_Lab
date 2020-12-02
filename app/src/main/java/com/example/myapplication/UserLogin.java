@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,9 +14,14 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class UserLogin extends AppCompatActivity {
 
@@ -23,11 +29,17 @@ public class UserLogin extends AppCompatActivity {
     Button mLoginBtn;
     ProgressBar progressBar;
     FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
+
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         mEmail = findViewById(R.id.Email1);
         mPassword = findViewById(R.id.Password1);
@@ -51,10 +63,6 @@ public class UserLogin extends AppCompatActivity {
                     return;
                 }
 
-                if(password.length() < 8){
-                    mPassword.setError("password must be more than 8 characters");
-                    return;
-                }
 
 
 
@@ -63,6 +71,20 @@ public class UserLogin extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()) {
+                            fAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                @Override
+                                public void onSuccess(AuthResult authResult) {
+                                    Toast.makeText(UserLogin.this,"Logged In", Toast.LENGTH_SHORT).show();
+                                    checkUserAccessLevel(authResult.getUser().getUid());
+                                    startActivity(new Intent(getApplicationContext(), userlayout.class));
+                                }
+                            }).addOnFailureListener(new OnFailureListener(){
+                                @Override
+                                public void onFailure(@NonNull Exception e){
+                                    Toast.makeText(UserLogin.this, "Error Incorrect Email or Password " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+
+                            });
                             Toast.makeText(UserLogin.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), userlayout.class));
 
@@ -76,5 +98,21 @@ public class UserLogin extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void checkUserAccessLevel(String uid) {
+        DocumentReference df= fStore.collection("Users").document(uid);
+        df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                Log.d( "TAG", "onSuccess" + documentSnapshot.getData());
+                if(documentSnapshot.getString("isAdmin") == null){
+                    startActivity(new Intent(getApplicationContext(), userlayout.class));
+
+                }else {
+                    Toast.makeText(UserLogin.this, "Error This is not a User! ", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
