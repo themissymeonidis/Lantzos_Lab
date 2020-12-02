@@ -57,26 +57,6 @@ public class UserRegister extends AppCompatActivity {
 
 
 
-        mSignUpBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String email = mEmail.getText().toString().trim();
-                String password = mPassword.getText().toString().trim();
-
-                if(TextUtils.isEmpty(email)){
-                    mEmail.setError("Email is Required");
-                    return;
-                }
-
-                if(TextUtils.isEmpty(password)){
-                    mPassword.setError("Password is Required");
-                    return;
-                }
-
-                if(password.length() < 8){
-                    mPassword.setError("password must be more than 8 characters");
-                    return;
-                }
 
 
 
@@ -113,7 +93,7 @@ public class UserRegister extends AppCompatActivity {
                                     // specify if the user is admin
                                     userInfo.put("isAdmin", "0");
                                     df.set(userInfo);
-                                    startActivity(new Intent(getApplicationContext(), adminlayout.class));
+                                    startActivity(new Intent(getApplicationContext(), userlayout.class));
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -124,7 +104,5 @@ public class UserRegister extends AppCompatActivity {
                         }
                     }
                 });
-            }
-        });
     }
 }
