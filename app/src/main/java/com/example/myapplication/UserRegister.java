@@ -16,12 +16,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class UserRegister extends AppCompatActivity {
 
     EditText mEmail,mPassword,mReEnterPassword;
     Button mSignUpBtn;
     FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
     ProgressBar progressBar;
 
     @Override
@@ -32,7 +34,7 @@ public class UserRegister extends AppCompatActivity {
         mEmail = findViewById(R.id.Email1);
         mPassword = findViewById(R.id.Password1);
         mReEnterPassword = findViewById(R.id.Rpassword);
-        mSignUpBtn = findViewById(R.id.user_signup_btn);
+        mSignUpBtn = findViewById(R.id.button10);
 
         fAuth = FirebaseAuth.getInstance();
 

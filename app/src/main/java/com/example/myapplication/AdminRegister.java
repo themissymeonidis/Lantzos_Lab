@@ -9,18 +9,14 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.rpc.context.AttributeContext;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -83,15 +79,14 @@ public class AdminRegister extends AppCompatActivity {
 
                         FirebaseUser Admin = fAuth.getCurrentUser();
                         Toast.makeText(AdminRegister.this, "Profile Created", Toast.LENGTH_SHORT).show();
-                        DocumentReference documentReference = fStore.collection("Users").document(Admin.getUid());
+                        DocumentReference df = fStore.collection("Users").document(Admin.getUid());
                         Map<String, Object> userInfo = new HashMap<>();
                         userInfo.put("UserEmail", mEmail.getText().toString());
                         // specify if the user is admin
-                        userInfo.put("isUser", "1");
+                        userInfo.put("isAdmin", "0");
+                        df.set(userInfo);
                         startActivity(new Intent(getApplicationContext(), adminlayout.class));
                     }
-
-
                   }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
