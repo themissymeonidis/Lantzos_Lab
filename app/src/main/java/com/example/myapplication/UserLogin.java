@@ -109,7 +109,7 @@ public class UserLogin extends AppCompatActivity {
                 if(documentSnapshot.getString("isAdmin") == null){
                     startActivity(new Intent(getApplicationContext(), userlayout.class));
 
-                }else {
+                }else if (documentSnapshot.getString("isAdmin") != null){
                     Toast.makeText(UserLogin.this, "Error This is not a User! ", Toast.LENGTH_SHORT).show();
                 }
             }
