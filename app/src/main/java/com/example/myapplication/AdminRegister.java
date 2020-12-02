@@ -79,11 +79,11 @@ public class AdminRegister extends AppCompatActivity {
 
                         FirebaseUser Admin = fAuth.getCurrentUser();
                         Toast.makeText(AdminRegister.this, "Profile Created", Toast.LENGTH_SHORT).show();
-                        DocumentReference df = fStore.collection("Users").document(Admin.getUid());
+                        DocumentReference df = fStore.collection("Admins").document(Admin.getUid());
                         Map<String, Object> userInfo = new HashMap<>();
                         userInfo.put("UserEmail", mEmail.getText().toString());
                         // specify if the user is admin
-                        userInfo.put("isAdmin", "0");
+                        userInfo.put("isAdmin", "1");
                         df.set(userInfo);
                         startActivity(new Intent(getApplicationContext(), adminlayout.class));
                     }

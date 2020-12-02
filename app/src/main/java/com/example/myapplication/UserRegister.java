@@ -32,6 +32,7 @@ public class UserRegister extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     ProgressBar progressBar;
+    private FirebaseAuth mAuth;
     Boolean valid = true;
 
     @Override
@@ -110,7 +111,7 @@ public class UserRegister extends AppCompatActivity {
                                     Map<String, Object> userInfo = new HashMap<>();
                                     userInfo.put("UserEmail", mEmail.getText().toString());
                                     // specify if the user is admin
-                                    userInfo.put("isUser", "1");
+                                    userInfo.put("isAdmin", "0");
                                     df.set(userInfo);
                                     startActivity(new Intent(getApplicationContext(), adminlayout.class));
                                 }
