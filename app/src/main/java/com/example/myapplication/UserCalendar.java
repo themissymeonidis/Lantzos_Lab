@@ -6,15 +6,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AdminCalendar extends AppCompatActivity {
+public class UserCalendar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.admin_calendar);
+        setContentView(R.layout.user_calendar);
 
         CalendarView calendarView=(CalendarView) findViewById(R.id.calendarView2);
-        TextView textView = (TextView) findViewById(R.id.editTextDate);
+        TextView textView = (TextView) findViewById(R.id.editTextDate2);
         calendarView.setOnDateChangeListener((view, year, month, dayOfMonth) -> {
             textView.setText("");
             String c = dayOfMonth +"/"+ month +"/"+ year;
