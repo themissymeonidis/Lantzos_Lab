@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.CalendarView;
 import android.widget.TextView;
@@ -19,7 +20,7 @@ public class AdminCalendar extends AppCompatActivity {
             //textView.setText("");
             String c = dayOfMonth +"/"+ month +"/"+ year;
             //textView.append(c);
-            setContentView(R.layout.program_admin);
+            startActivity(new Intent(getApplicationContext(),AdminProgram.class));
         });
 
     }

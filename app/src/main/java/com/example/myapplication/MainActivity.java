@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
             userlogin.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
 
-                    startActivity(new Intent(getApplicationContext(),UserLogin.class));
+
                 }
             });
 
