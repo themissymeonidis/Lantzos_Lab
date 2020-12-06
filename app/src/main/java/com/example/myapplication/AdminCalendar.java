@@ -16,9 +16,10 @@ public class AdminCalendar extends AppCompatActivity {
         CalendarView calendarView=(CalendarView) findViewById(R.id.calendarView2);
         TextView textView = (TextView) findViewById(R.id.editTextDate);
         calendarView.setOnDateChangeListener((view, year, month, dayOfMonth) -> {
-            textView.setText("");
+            //textView.setText("");
             String c = dayOfMonth +"/"+ month +"/"+ year;
-            textView.append(c);
+            //textView.append(c);
+            setContentView(R.layout.program_admin);
         });
 
     }

@@ -21,7 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AdminRegister extends AppCompatActivity {
+public class  AdminRegister extends AppCompatActivity {
 
     EditText mEmail,mPassword,mReEnterPassword;
     Button mSignUpBtn;
@@ -49,7 +49,6 @@ public class AdminRegister extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
             finish();
         }
-
 
 
         mSignUpBtn.setOnClickListener(new View.OnClickListener() {

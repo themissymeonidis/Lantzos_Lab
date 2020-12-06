@@ -15,6 +15,7 @@
         <activity android:name=".UserLogin" />
         <activity android:name=".AdminLogin" />
         <activity android:name=".AdminRegister" />
+        <activity android:name=".Salary" />
         <activity android:name=".AdminCalendar" />
         <activity android:name=".userlayout" />
         <activity android:name=".adminlayout" />
