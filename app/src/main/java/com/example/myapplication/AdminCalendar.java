@@ -15,12 +15,11 @@ public class AdminCalendar extends AppCompatActivity {
         setContentView(R.layout.admin_calendar);
 
         CalendarView calendarView=(CalendarView) findViewById(R.id.calendarView2);
-        TextView textView = (TextView) findViewById(R.id.editTextDate);
         calendarView.setOnDateChangeListener((view, year, month, dayOfMonth) -> {
-            //textView.setText("");
             String c = dayOfMonth +"/"+ month +"/"+ year;
-            //textView.append(c);
-            startActivity(new Intent(getApplicationContext(),AdminProgram.class));
+            Intent i = new Intent(this, AdminProgram.class);
+            i.putExtra("epuzzle", String.valueOf(c));
+            startActivity(i);
         });
 
     }
