@@ -31,7 +31,6 @@ public class UserRegister extends AppCompatActivity {
     Button mSignUpBtn;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
-    ProgressBar progressBar;
     private FirebaseAuth mAuth;
     Boolean valid = true;
 
@@ -54,10 +53,6 @@ public class UserRegister extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),userlayout.class));
             finish();
         }
-
-
-
-
 
 
                 mSignUpBtn.setOnClickListener(new View.OnClickListener() {
