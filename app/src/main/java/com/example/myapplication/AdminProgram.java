@@ -15,12 +15,14 @@ public class AdminProgram extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     private FirebaseAuth mAuth;
-
+    EditText userlist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.program_admin);
+
+        userlist = findViewById(R.id.editTextTextMultiLine);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -31,8 +33,10 @@ public class AdminProgram extends AppCompatActivity {
 
         FirebaseUser user = mAuth.getCurrentUser();
 
-        EditText userslist = (EditText) findViewById(R.id.editTextTextMultiLine);
-        userslist.setText((CharSequence) user);
+
+        String userstr = userlist.getText().toString().trim();
+
+        userlist.setText((CharSequence) userstr);
 
     }
 }
