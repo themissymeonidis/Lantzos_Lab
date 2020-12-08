@@ -32,7 +32,9 @@ public class UserProfile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.userprofile);
 
         getname = findViewById(R.id.get_name);
