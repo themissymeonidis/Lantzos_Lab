@@ -96,7 +96,9 @@
             android:layout_weight="1">
 
             <RelativeLayout
+                android:id="@+id/Admin_RelativeManage"
                 android:layout_width="match_parent"
+                android:clickable="true"
                 android:layout_height="match_parent"
                 android:background="#157381">
 
