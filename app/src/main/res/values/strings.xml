@@ -82,4 +82,6 @@
     <string name="passwordUSU">Password</string>
     <string name="sign_upUSU">Sign Up</string>
     <string name="deleteTODO">DELETE</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
 </resources>

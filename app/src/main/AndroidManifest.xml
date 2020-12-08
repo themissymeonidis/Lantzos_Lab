@@ -18,6 +18,7 @@
         <activity android:name=".Salary" />
         <activity android:name=".AdminProgram" />
         <activity android:name=".AdminCalendar" />
+        <activity android:name=".AfterAdminRegister" />
         <activity android:name=".userlayout" />
         <activity android:name=".adminlayout" />
         <activity android:name=".MainActivity">

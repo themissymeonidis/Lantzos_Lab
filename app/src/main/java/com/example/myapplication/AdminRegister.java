@@ -15,8 +15,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -38,9 +36,9 @@ public class  AdminRegister extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_register);
 
-        mEmail = findViewById(R.id.Email);
-        mPassword = findViewById(R.id.Password);
-        mReEnterPassword = findViewById(R.id.Rpassword);
+        mEmail = findViewById(R.id.Admin_Mail);
+        mPassword = findViewById(R.id.Admin_Pass);
+        mReEnterPassword = findViewById(R.id.Admin_RePass);
         mSignUpBtn = findViewById(R.id.button12);
 
         fAuth = FirebaseAuth.getInstance();
@@ -81,13 +79,13 @@ public class  AdminRegister extends AppCompatActivity {
 
                         FirebaseUser Admin = fAuth.getCurrentUser();
                         Toast.makeText(AdminRegister.this, "Profile Created", Toast.LENGTH_SHORT).show();
-                        DocumentReference df = fStore.collection("Admins").document(Admin.getUid());
+                        DocumentReference df = fStore.collection("Users").document(Admin.getEmail());
                         Map<String, Object> userInfo = new HashMap<>();
                         userInfo.put("UserEmail", mEmail.getText().toString());
                         // specify if the user is admin
                         userInfo.put("isAdmin", "1");
                         df.set(userInfo);
-                        startActivity(new Intent(getApplicationContext(), adminlayout.class));
+                        startActivity(new Intent(getApplicationContext(), AfterAdminRegister.class));
                     }
                   }).addOnFailureListener(new OnFailureListener() {
                     @Override
