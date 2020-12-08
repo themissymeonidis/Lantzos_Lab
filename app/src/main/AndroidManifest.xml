@@ -15,12 +15,14 @@
         <activity android:name=".UserLogin" />
         <activity android:name=".AdminLogin" />
         <activity android:name=".AdminRegister" />
+        <activity android:name=".AfterUserRegister" />
         <activity android:name=".Salary" />
         <activity android:name=".AdminProgram" />
         <activity android:name=".AdminCalendar" />
         <activity android:name=".AfterAdminRegister" />
         <activity android:name=".UserProfile" />
         <activity android:name=".userlayout" />
+        <activity android:name=".adminManage" />
         <activity android:name=".adminlayout" />
         <activity android:name=".MainActivity">
 

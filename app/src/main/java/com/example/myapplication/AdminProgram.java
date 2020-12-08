@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -40,6 +41,7 @@ public class AdminProgram extends AppCompatActivity {
         EditText title = (EditText) findViewById(R.id.editTextDate);
         Button button = (Button) findViewById(R.id.button);
         TextView lista = (TextView) findViewById(R.id.List);
+        lista.setMovementMethod(new ScrollingMovementMethod());
         Spinner dropdown = findViewById(R.id.spinner);
         Intent intent = getIntent();
         String themis = intent.getExtras().getString("epuzzle");
@@ -51,7 +53,7 @@ public class AdminProgram extends AppCompatActivity {
         FirebaseUser user = fAuth.getCurrentUser();
 
 
-        String bardia = "prwi";
+        String bardia = "Night";
         lista.setText("Users: ");
 
 
@@ -81,11 +83,11 @@ public class AdminProgram extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String telos = themis.replace("/", ".");
-                DocumentReference df = fStore.collection("Users").document("user@gmail.com");
+                DocumentReference df = fStore.collection("Users").document("bradpitt@gmail.com");
                 DocumentReference ypo = df.collection("Calendar").document(telos);
                 Map<String, Object> calendar = new HashMap<>();
-                calendar.put("Bardia", bardia);
-                calendar.put("Wres", "8");
+                calendar.put("Shift", bardia);
+                calendar.put("Hours", "8");
                 ypo.set(calendar);
 
 

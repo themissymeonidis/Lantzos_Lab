@@ -109,7 +109,7 @@
         android:layout_marginTop="300dp"
         android:fontFamily="@font/aclonica"
         android:text="Name:"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -117,72 +117,72 @@
         android:id="@+id/get_name"
         android:layout_width="203dp"
         android:layout_height="43dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
         android:layout_marginTop="300dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:fontFamily="@font/aclonica"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/Uprofile_Name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/get_address"
         android:layout_width="203dp"
         android:layout_height="43dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:fontFamily="@font/aclonica"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/Uprofile_Address"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/get_name" />
 
     <TextView
         android:id="@+id/get_phone"
         android:layout_width="203dp"
         android:layout_height="43dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:fontFamily="@font/aclonica"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/Uprofile_phone"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/get_address" />
 
     <TextView
         android:id="@+id/get_gender"
         android:layout_width="203dp"
         android:layout_height="43dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:fontFamily="@font/aclonica"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/Uprofile_Gender"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/get_phone" />
 
     <TextView
         android:id="@+id/get_email"
         android:layout_width="203dp"
         android:layout_height="43dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:fontFamily="@font/aclonica"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/uprofile_Gender"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/get_gender" />
 
     <TextView
         android:id="@+id/Uprofile_Address"
         android:layout_width="154dp"
-        android:layout_height="39dp"
+        android:layout_height="43dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
         android:text="Address:"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Uprofile_Name" />
 
@@ -195,7 +195,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
         android:text="Phone:"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Uprofile_Address" />
 
@@ -208,20 +208,20 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
         android:text="Gender:"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Uprofile_phone" />
 
     <TextView
         android:id="@+id/uprofile_Gender"
         android:layout_width="113dp"
-        android:layout_height="42dp"
+        android:layout_height="43dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
         android:text="Email:"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Uprofile_Gender" />
 

@@ -85,7 +85,7 @@ public class UserRegister extends AppCompatActivity {
                                     // specify if the user is admin
                                     userInfo.put("isAdmin", "0");
                                     df.set(userInfo);
-                                    startActivity(new Intent(getApplicationContext(), userlayout.class));
+                                    startActivity(new Intent(getApplicationContext(), AfterUserRegister.class));
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
