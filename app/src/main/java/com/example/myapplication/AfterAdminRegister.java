@@ -1,7 +1,6 @@
 package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -15,20 +14,20 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
 public class AfterAdminRegister extends AppCompatActivity {
     FirebaseAuth fAuth;
     EditText AName, Aaddress, phone;
-    CheckBox AMale;
+    CheckBox AMale, AFemale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_after_register);
         final CheckBox checkBox = (CheckBox) findViewById(R.id.Admin_GMale);
+        final CheckBox checkBox2 = (CheckBox) findViewById(R.id.admin_FMale);
         fAuth = FirebaseAuth.getInstance();
         AName = findViewById(R.id.Admin_Name);
         Aaddress = findViewById(R.id.Admin_Address);
@@ -44,9 +43,15 @@ public class AfterAdminRegister extends AppCompatActivity {
         completeinfo.setOnClickListener(new View.OnClickListener() {
         public void onClick(View view){
 
-            String gender = "male";
+            String gender;
             if (checkBox.isChecked()) {
-                gender = "male";
+                gender = "Male";
+            } else
+                {
+                    gender = "Female";
+                }
+            if (checkBox2.isChecked()){
+                 gender = "Female";
             }
 
             String name = AName.getText().toString();
@@ -70,6 +75,7 @@ public class AfterAdminRegister extends AppCompatActivity {
 
 
         }
+
     }
 
 
