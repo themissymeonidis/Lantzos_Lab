@@ -84,4 +84,6 @@
     <string name="deleteTODO">DELETE</string>
     <string name="female">Female</string>
     <string name="male">Male</string>
+    <string name="button">Button</string>
+    <string name="Back">back</string>
 </resources>

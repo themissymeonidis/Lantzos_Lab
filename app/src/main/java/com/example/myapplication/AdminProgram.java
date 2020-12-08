@@ -85,7 +85,7 @@ public class AdminProgram extends AppCompatActivity {
                 DocumentReference ypo = df.collection("Calendar").document(telos);
                 Map<String, Object> calendar = new HashMap<>();
                 calendar.put("Bardia", bardia);
-                calendar.put("Wres", "24");
+                calendar.put("Wres", "8");
                 ypo.set(calendar);
 
 
