@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
             userlogin.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-
+                    startActivity(new Intent(getApplicationContext(),AdminLogin.class));
 
                 }
             });

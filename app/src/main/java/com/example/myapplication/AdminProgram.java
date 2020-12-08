@@ -8,7 +8,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.auth.User;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AdminProgram extends AppCompatActivity {
@@ -30,9 +32,12 @@ public class AdminProgram extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("message");
 
         FirebaseUser user = mAuth.getCurrentUser();
+        String email = user.getEmail();
+        EditText mytext = (EditText) findViewById(R.id.editTextTextMultiLine);
+        mytext.setText(email);
 
-        EditText userslist = (EditText) findViewById(R.id.editTextTextMultiLine);
-        userslist.setText((CharSequence) user);
+
+
 
     }
 }
