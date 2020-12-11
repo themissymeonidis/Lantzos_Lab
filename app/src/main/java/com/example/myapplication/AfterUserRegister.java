@@ -24,6 +24,7 @@ public class AfterUserRegister extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_after_register);
         final CheckBox checkBox = (CheckBox) findViewById(R.id.User_GMale);
@@ -60,10 +61,12 @@ public class AfterUserRegister extends AppCompatActivity {
 
 
             Map<String, Object> userInfo = new HashMap<>();
+
             userInfo.put("Name", name);
             userInfo.put("Address", address);
             userInfo.put("Phone", Sphone);
             userInfo.put("Gender", gender);
+
             docref.update(userInfo);
 
 
