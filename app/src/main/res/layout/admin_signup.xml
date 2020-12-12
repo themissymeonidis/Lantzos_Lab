@@ -9,14 +9,14 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="200dp"
-        android:layout_height="39dp"
+        android:layout_width="287dp"
+        android:layout_height="35dp"
         android:text="Admin Sign Up"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="30sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="42dp" />
+        tools:layout_editor_absoluteY="46dp" />
 
     <Button
         android:id="@+id/button12"
