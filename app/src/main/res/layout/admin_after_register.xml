@@ -2,15 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/password"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AdminRegister">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="122dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginStart="105dp"
         android:layout_marginLeft="105dp"
         android:layout_marginTop="42dp"
@@ -25,10 +23,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:text="Register" />
+        tools:text="Some Info" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/btn_Admin_Info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="159dp"
@@ -45,81 +43,90 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="create profile" />
 
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="184dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="101dp"
-        android:layout_marginLeft="101dp"
-        android:layout_marginTop="338dp"
-        android:layout_marginEnd="126dp"
-        android:layout_marginRight="126dp"
-        android:layout_marginBottom="225dp"
-        android:text="@string/im_not_a_robot"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
-        android:id="@+id/Admin_RePass"
+        android:id="@+id/Admin_Phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
         android:layout_marginLeft="99dp"
-        android:layout_marginTop="279dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="274dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/re_enter_password"
-        android:inputType="textPassword"
+        android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Admin_Address"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/Admin_Pass"
+        android:id="@+id/Admin_Address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
         android:layout_marginLeft="99dp"
-        android:layout_marginTop="218dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="49dp"
         android:layout_marginRight="49dp"
         android:layout_marginBottom="335dp"
         android:ems="10"
-        android:hint="@string/password1"
         android:importantForAutofill="no"
-        android:inputType="textPassword"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/Admin_Name"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/Admin_Mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/Admin_Name"
+        android:layout_width="214dp"
+        android:layout_height="43dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="153dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="98dp"
         android:layout_marginRight="98dp"
         android:layout_marginBottom="400dp"
         android:ems="10"
-        android:hint="@string/e_mail2"
         android:importantForAutofill="no"
-        android:inputType="textWebEmailAddress"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.392" />
+
+    <CheckBox
+        android:id="@+id/Admin_GMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="@string/male"
+        app:layout_constraintEnd_toStartOf="@+id/admin_FMale"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Admin_Phone" />
+
+    <CheckBox
+        android:id="@+id/admin_FMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:text="@string/female"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Admin_Phone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

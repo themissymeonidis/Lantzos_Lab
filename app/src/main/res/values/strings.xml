@@ -82,13 +82,8 @@
     <string name="passwordUSU">Password</string>
     <string name="sign_upUSU">Sign Up</string>
     <string name="deleteTODO">DELETE</string>
-    <string name="program" />
-    <string name="backCal" />
-    <string name="total_income">income</string>
-    <string name="overtime">overtime</string>
-    <string name="days_worked">days_worked</string>
-    <string name="hourly_wage">hourly_wage</string>
-    <string name="backTo">backTo</string>
-    <string name="userIncome">userIncome</string>
-
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="button">Button</string>
+    <string name="Back">back</string>
 </resources>
