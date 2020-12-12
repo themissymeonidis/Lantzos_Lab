@@ -49,9 +49,6 @@ public class UserProfile extends AppCompatActivity {
     FirebaseUser user = fAuth.getCurrentUser();
     String userEmail = user.getEmail();
 
-
-
-
         db.collection("Users").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
