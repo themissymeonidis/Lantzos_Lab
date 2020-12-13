@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "502407576720",
+    "firebase_url": "https://autometousergazomenous.firebaseio.com",
+    "project_id": "autometousergazomenous",
+    "storage_bucket": "autometousergazomenous.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502407576720:android:8fdd48a5557293faacac15",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502407576720-7fj7jbhc3c499aq62hl7bhvbbcoe58t8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJzlqDh2Fmcn3AGfQNxawcn7_LDG0OfEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502407576720-7fj7jbhc3c499aq62hl7bhvbbcoe58t8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
