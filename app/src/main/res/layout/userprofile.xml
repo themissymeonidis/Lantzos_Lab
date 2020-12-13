@@ -225,5 +225,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Uprofile_Gender" />
 
+    <Button
+        android:id="@+id/info_update"
+        android:layout_width="111dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="50dp"
+        android:text="Edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/get_email"
+        app:layout_constraintVertical_bias="0.993" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
