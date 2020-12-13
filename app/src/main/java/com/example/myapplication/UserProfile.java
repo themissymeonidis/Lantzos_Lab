@@ -40,7 +40,7 @@ public class UserProfile extends AppCompatActivity {
         info_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),UserProfileEdit.class));
+                startActivity(new Intent(getApplicationContext(),UserProfile.class));
             }
         });
 
@@ -139,6 +139,8 @@ public class UserProfile extends AppCompatActivity {
 
     }
 }
+
+
 
 
 
