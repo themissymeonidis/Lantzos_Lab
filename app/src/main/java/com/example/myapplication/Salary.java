@@ -12,6 +12,7 @@ public class Salary extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.salary);
 
@@ -34,10 +35,13 @@ public class Salary extends AppCompatActivity {
                 String sa = hours.getText().toString();
                 String sb = days.getText().toString();
                 String sc = overtime.getText().toString();
+
                 float a = Float.parseFloat(sa);
                 float b = Float.parseFloat(sb);
                 float c = Float.parseFloat(sc);
+
                 float total = (a * (b * 8)) + (a * ((c * 25) / 100));
+
                 income.setText(String.valueOf(total));
 
             }

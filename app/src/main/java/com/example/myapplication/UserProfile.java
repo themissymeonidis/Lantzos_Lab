@@ -1,39 +1,44 @@
 package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentChange;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.firestore.Source;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 
 public class UserProfile extends AppCompatActivity {
     FirebaseAuth fAuth;
-    TextView getname, getaddress, getphone, getemail, getgender;
+    FirebaseFirestore fStore;
+    EditText getname, getaddress, getphone, getemail, getgender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.userprofile);
+
+
+        Button info_update = (Button) findViewById(R.id.info_update);
+
+        info_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),UserProfileEdit.class));
+            }
+        });
+
 
         getname = findViewById(R.id.get_name);
         getaddress = findViewById(R.id.get_address);
@@ -76,6 +81,52 @@ public class UserProfile extends AppCompatActivity {
                 }
             }
         });
+
+        Button edit = (Button) findViewById(R.id.button3);
+        Button back = (Button) findViewById(R.id.button2);
+        Button confirm = (Button) findViewById(R.id.button5);
+        edit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                edit.setVisibility(View.GONE);
+                back.setVisibility(View.GONE);
+                confirm.setVisibility(View.VISIBLE);
+                getname.setEnabled(true);
+                getaddress.setEnabled(true);
+                getphone.setEnabled(true);
+                getgender.setEnabled(true);
+                getemail.setEnabled(true);
+            }
+        });
+
+        DocumentReference docref = db.collection("Users").document(userEmail);
+        confirm.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                edit.setVisibility(View.VISIBLE);
+                back.setVisibility(View.VISIBLE);
+                confirm.setVisibility(View.GONE);
+                getname.setEnabled(false);
+                getaddress.setEnabled(false);
+                getphone.setEnabled(false);
+                getgender.setEnabled(false);
+                getemail.setEnabled(false);
+                String name = getname.getText().toString().trim();
+                String address = getaddress.getText().toString().trim();
+                String phone = getphone.getText().toString().trim();
+                String gender = getgender.getText().toString().trim();
+                String email = getemail.getText().toString().trim();
+                Map<String, Object> userInfo = new HashMap<>();
+
+                userInfo.put("UserEmail", email);
+                userInfo.put("Name", name);
+                userInfo.put("Address", address);
+                userInfo.put("Phone", phone);
+                userInfo.put("Gender", gender);
+
+                docref.update(userInfo);
+
+            }
+        });
+
 
 
         }
