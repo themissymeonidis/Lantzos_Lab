@@ -9,9 +9,11 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,19 +57,15 @@ public class UserProfile extends AppCompatActivity {
     String userEmail = user.getEmail();
 
 
-
-
-        db.collection("Users").addSnapshotListener(new EventListener<QuerySnapshot>() {
+        ListenerRegistration listenerRegistration = db.collection("Users").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
 
-                if (e !=null)
-                {
+                if (e != null) {
 
                 }
 
-                for (DocumentChange documentChange : documentSnapshots.getDocumentChanges())
-                {
+                for (DocumentChange documentChange : documentSnapshots.getDocumentChanges()) {
                     if (documentChange.getDocument().getData().get("UserEmail").toString().equals(userEmail)) {
 
                         String name = documentChange.getDocument().getData().get("Name").toString();
