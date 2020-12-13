@@ -26,13 +26,13 @@ public class adminManage extends AppCompatActivity {
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_manage);
         TextView userlist = findViewById(R.id.AdminUserList);
-        EditText firetext = (EditText) findViewById(R.id.FireText);
-        Button fire = findViewById(R.id.AdminFire);
+        Button fire = findViewById(R.id.fire_btn);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -44,13 +44,11 @@ public class adminManage extends AppCompatActivity {
             @Override
             public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
 
-                if (e !=null)
-                {
+                if (e != null) {
 
                 }
 
-                for (DocumentChange documentChange : documentSnapshots.getDocumentChanges())
-                {
+                for (DocumentChange documentChange : documentSnapshots.getDocumentChanges()) {
                     if (documentChange.getDocument().getData().get("isAdmin").toString().equals("0")) {
 
                         String names = documentChange.getDocument().getData().get("Name").toString();
@@ -63,49 +61,5 @@ public class adminManage extends AppCompatActivity {
         });
 
 
-
-        fire.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String nametofire = firetext.getText().toString();
-                db.collection("Users").addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
-
-                        if (e !=null)
-                        {
-
-                        }
-
-                        for (DocumentChange documentChange : documentSnapshots.getDocumentChanges())
-                        {
-                            if (documentChange.getDocument().getData().get("Name").toString().equals(nametofire)) {
-
-                                String emailtofire = documentChange.getDocument().getData().get("UserEmail").toString();
-
-                                db.collection("Users").document(emailtofire)
-                                        .delete()
-                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                            @Override
-                                            public void onSuccess(Void aVoid) {
-                                                Toast.makeText(adminManage.this, "Deleted User " + emailtofire, Toast.LENGTH_SHORT).show();
-                                            }
-                                        })
-                                        .addOnFailureListener(new OnFailureListener() {
-                                            @Override
-                                            public void onFailure(@NonNull Exception e) {
-                                                Toast.makeText(adminManage.this, "An error occured while deleting " + nametofire, Toast.LENGTH_SHORT).show();
-                                            }
-                                        });
-                            }
-                        }
-                    }
-                });
-
-
-
-
-            }
-        });
     }
 }

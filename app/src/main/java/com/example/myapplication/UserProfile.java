@@ -3,16 +3,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,7 +35,7 @@ public class UserProfile extends AppCompatActivity {
         setContentView(R.layout.userprofile);
 
 
-        Button info_update = (Button) findViewById(R.id.info_update);
+        Button info_update = (Button) findViewById(R.id.button5);
 
         info_update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,10 +54,13 @@ public class UserProfile extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
 
 
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    FirebaseUser user = fAuth.getCurrentUser();
-    String userEmail = user.getEmail();
+        FirebaseUser user = fAuth.getCurrentUser();
+        String userEmail = user.getEmail();
+
+
+
 
         db.collection("Users").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
@@ -129,9 +137,8 @@ public class UserProfile extends AppCompatActivity {
 
 
 
-        }
+    }
 }
-
 
 
 
