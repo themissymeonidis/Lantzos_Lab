@@ -84,6 +84,8 @@ public class UserRegister extends AppCompatActivity {
                                     userInfo.put("UserEmail", mEmail.getText().toString());
                                     // specify if the user is admin
                                     userInfo.put("isAdmin", "0");
+                                    userInfo.put("HoursWorked", "0");
+
                                     df.set(userInfo);
                                     startActivity(new Intent(getApplicationContext(), AfterUserRegister.class));
                                 }
