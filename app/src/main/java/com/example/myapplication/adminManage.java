@@ -54,7 +54,7 @@ public class adminManage extends AppCompatActivity {
         setContentView(R.layout.admin_manage);
 
         TextView userlist = findViewById(R.id.AdminUserList);
-        Button fire = findViewById(R.id.fire_btn);
+        Button fire = findViewById(R.id.AdminFire);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
