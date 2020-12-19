@@ -31,6 +31,8 @@ public class adminlayout extends AppCompatActivity {
         setContentView(R.layout.adminlayout);
         RelativeLayout relativeclick1 =(RelativeLayout)findViewById(R.id.calendar_admin);
         RelativeLayout gotomanage =(RelativeLayout)findViewById(R.id.Admin_RelativeManage);
+        RelativeLayout Todo =(RelativeLayout)findViewById(R.id.relativeTodo);
+
 
         Button logout = (Button) findViewById(R.id.Alogout_btn);
         fAuth = FirebaseAuth.getInstance();
@@ -55,6 +57,12 @@ public class adminlayout extends AppCompatActivity {
 
             public void onClick(View v){
                 startActivity(new Intent(getApplicationContext(),adminManage.class));
+            }
+        });
+        Todo.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+                startActivity(new Intent(getApplicationContext(),AdminTodo.class));
             }
         });
 
