@@ -12,7 +12,7 @@
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient"
+        android:background="@color/dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,11 +25,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Log Out"
+            android:textColor="#C4C4C4"
+            app:backgroundTint="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.9" />
+            app:layout_constraintVertical_bias="0.85" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
@@ -43,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_bias="0.060000002"
         tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
@@ -56,7 +58,7 @@
                 android:id="@+id/relative5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#057381"
+                android:background="@color/dark"
                 android:visibility="visible"
                 tools:visibility="visible">
 
@@ -65,19 +67,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/calendar"
-
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
                     android:text="@string/calendar"
-                    android:textSize="25sp"
+                    android:textColor="#C4C4C4"
+                    android:textSize="20sp"
                     app:fontFamily="@font/aclonica" />
 
                 <ImageView
                     android:id="@+id/calendar"
-                    android:layout_width="95dp"
-                    android:layout_height="66dp"
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="#28D1B1"
+                    android:background="#FFFFFF"
                     android:contentDescription="@string/calendar"
                     app:srcCompat="@drawable/calendar" />
             </RelativeLayout>
@@ -93,7 +96,7 @@
                 android:id="@+id/relative6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#057381"
+                android:background="@color/dark"
                 android:clickable="true">
 
                 <TextView
@@ -102,20 +105,22 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/myprofile"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="-2dp"
-                    android:text="@string/my_profile"
-                    android:textSize="24sp"
+                    android:layout_marginTop="15dp"
+                    android:text="My Profile"
+                    android:textColor="#C4C4C4"
+                    android:textSize="20sp"
                     app:fontFamily="@font/aclonica" />
 
                 <ImageView
                     android:id="@+id/myprofile"
-                    android:layout_width="69dp"
-                    android:layout_height="83dp"
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="#002D88"
+                    android:background="#FFFFFF"
                     android:contentDescription="@string/my_profile"
-                    app:srcCompat="@drawable/profile" />
+                    app:srcCompat="@drawable/profile"
+                    tools:srcCompat="@drawable/profileuser" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -130,8 +135,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.050000012">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
@@ -143,7 +147,7 @@
                 android:id="@+id/relative7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#057381">
+                android:background="@color/dark">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -151,17 +155,19 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/todolist"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="9dp"
-                    android:text="@string/to_do_list"
-                    android:textSize="24sp"
+                    android:layout_marginTop="15dp"
+                    android:text="To Do List"
+                    android:textColor="#C4C4C4"
+                    android:textSize="20sp"
                     app:fontFamily="@font/aclonica" />
 
                 <ImageView
                     android:id="@+id/todolist"
-                    android:layout_width="104dp"
-                    android:layout_height="78dp"
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
+                    android:background="#FFFFFF"
                     android:contentDescription="@string/to_do_list"
                     app:srcCompat="@drawable/todo" />
             </RelativeLayout>
@@ -177,7 +183,7 @@
                 android:id="@+id/relative8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#057381"
+                android:background="@color/dark"
                 android:clickable="true">
 
                 <TextView
@@ -186,14 +192,15 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/salary"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:text="@string/salary"
-                    android:textSize="24sp" />
+                    android:textColor="#C4C4C4"
+                    android:textSize="20sp" />
 
                 <ImageView
                     android:id="@+id/salary"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="#FFFFFF"

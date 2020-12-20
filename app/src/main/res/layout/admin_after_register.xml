@@ -22,10 +22,11 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:text="Some Info" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="About You" />
 
     <Button
         android:id="@+id/btn_Admin_Info"
@@ -33,28 +34,28 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="159dp"
         android:layout_marginLeft="159dp"
-        android:layout_marginTop="423dp"
         android:layout_marginEnd="164dp"
         android:layout_marginRight="164dp"
-        android:layout_marginBottom="132dp"
         android:text="@string/signup1"
         android:textColor="#C4C4C4"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.594"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
         tools:text="create profile" />
 
     <EditText
         android:id="@+id/Admin_Phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginLeft="99dp"
+        android:layout_width="229dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginLeft="82dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
         android:layout_marginBottom="274dp"
         android:autofillHints=""
         android:ems="10"
@@ -63,20 +64,19 @@
         android:textColor="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Admin_Address"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/Admin_Address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginLeft="99dp"
+        android:layout_width="231dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginRight="49dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
         android:layout_marginBottom="335dp"
         android:ems="10"
         android:importantForAutofill="no"
@@ -85,7 +85,6 @@
         android:textColor="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Admin_Name"
         app:layout_constraintVertical_bias="0.0"
@@ -93,8 +92,8 @@
 
     <EditText
         android:id="@+id/Admin_Name"
-        android:layout_width="214dp"
-        android:layout_height="43dp"
+        android:layout_width="230dp"
+        android:layout_height="42dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="10dp"
@@ -108,38 +107,61 @@
         android:textColor="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.392" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <CheckBox
         android:id="@+id/Admin_GMale"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_width="78dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginBottom="140dp"
         android:text="@string/male"
         android:textColor="#C4C4C4"
         app:buttonTint="#C4C4C4"
-        app:layout_constraintEnd_toStartOf="@+id/admin_FMale"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Admin_Info"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Admin_Phone" />
+        app:layout_constraintTop_toBottomOf="@+id/Admin_Phone"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/admin_FMale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
+        android:layout_marginBottom="140dp"
         android:text="@string/female"
         android:textColor="#C4C4C4"
         app:buttonTint="#C4C4C4"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Admin_Info"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Admin_Phone" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Admin_GMale"
+        app:layout_constraintTop_toBottomOf="@+id/Admin_Phone"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="62dp"
+        app:layout_constraintBottom_toTopOf="@+id/Admin_Name"
+        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/application" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
