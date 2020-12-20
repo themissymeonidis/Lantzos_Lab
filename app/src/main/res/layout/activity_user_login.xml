@@ -103,8 +103,16 @@
         android:id="@+id/imageView5"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        app:srcCompat="@drawable/application"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="48dp" />
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="107dp"
+        app:layout_constraintBottom_toTopOf="@+id/Email1"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/application" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

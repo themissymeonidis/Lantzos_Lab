@@ -93,16 +93,15 @@
         android:id="@+id/user_login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="490dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="88dp"
         android:text="@string/calculate"
         android:textColor="#C4C4C4"
         android:textStyle="bold"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/admin_login_btn"
@@ -117,6 +116,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89"
         tools:text="back" />
 
     <TextView
@@ -186,7 +186,7 @@
         android:layout_marginRight="42dp"
         android:layout_marginBottom="280dp"
         android:background="#FFFFFF"
-        android:textColor="#C4C4C4"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

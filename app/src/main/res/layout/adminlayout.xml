@@ -63,7 +63,7 @@
                 android:id="@+id/calendar_admin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark"
+                android:background="@color/orange"
                 android:clickable="true"
                 android:visibility="visible"
                 tools:visibility="visible">
@@ -101,7 +101,7 @@
                 android:id="@+id/Admin_RelativeManage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark"
+                android:background="@color/green"
                 android:clickable="true"
                 android:visibility="visible"
                 tools:visibility="visible">
@@ -151,7 +151,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark">
+                android:background="#E3274A">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -186,7 +186,7 @@
                 android:id="@+id/relativeTodo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark">
+                android:background="@color/bluelight">
 
                 <TextView
                     android:id="@+id/textView7"
