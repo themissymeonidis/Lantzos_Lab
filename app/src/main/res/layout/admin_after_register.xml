@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/dark">
 
     <TextView
         android:id="@+id/textView10"
@@ -17,6 +18,7 @@
         android:layout_marginBottom="522dp"
         android:text="@string/admin_signup"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#C4C4C4"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,6 +38,7 @@
         android:layout_marginRight="164dp"
         android:layout_marginBottom="132dp"
         android:text="@string/signup1"
+        android:textColor="#C4C4C4"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +59,8 @@
         android:autofillHints=""
         android:ems="10"
         android:inputType="phone"
+        android:text="Phone"
+        android:textColor="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -76,6 +81,8 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="text"
+        android:text="Address"
+        android:textColor="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -97,6 +104,8 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="text"
+        android:text="Name"
+        android:textColor="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -114,6 +123,8 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:text="@string/male"
+        android:textColor="#C4C4C4"
+        app:buttonTint="#C4C4C4"
         app:layout_constraintEnd_toStartOf="@+id/admin_FMale"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Admin_Phone" />
@@ -126,6 +137,8 @@
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:text="@string/female"
+        android:textColor="#C4C4C4"
+        app:buttonTint="#C4C4C4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Admin_Phone" />
 

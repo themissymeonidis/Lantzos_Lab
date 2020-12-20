@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient">
+    android:background="@color/dark">
 
     <TextView
         android:id="@+id/textView2"
@@ -13,6 +13,8 @@
         android:layout_marginTop="50dp"
         android:text="@string/sign_up_AdminL"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#C4C4C4"
+        android:textColorHint="#C4C4C4"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,12 +27,13 @@
         android:layout_marginTop="279dp"
         android:ems="10"
         android:hint="@string/re_enter_passwordUSU"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:textColorHint="#C4C4C4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/User_Signup_Email"
@@ -39,11 +42,12 @@
         android:layout_marginTop="149dp"
         android:ems="10"
         android:hint="@string/e_mailUSU"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:textColorHint="#C4C4C4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/User_Signup_pass"
@@ -52,11 +56,13 @@
         android:layout_marginTop="218dp"
         android:ems="10"
         android:hint="@string/passwordUSU"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:textColorHint="#C4C4C4"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_User_Registr"
@@ -64,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="132dp"
         android:text="@string/sign_upUSU"
+        android:textColor="#C4C4C4"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,6 +82,9 @@
         android:layout_height="40dp"
         android:layout_marginBottom="225dp"
         android:text="@string/i_m_not_a_robotUSU"
+        android:textColor="#C4C4C4"
+        android:textColorHint="#C4C4C4"
+        app:buttonTint="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

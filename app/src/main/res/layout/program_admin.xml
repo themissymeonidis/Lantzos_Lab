@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient">
+    android:background="@color/dark">
 
     <TextView
         android:id="@+id/textView5"
@@ -18,6 +18,7 @@
         android:layout_marginBottom="528dp"
         android:gravity="center"
         android:text="Program"
+        android:textColor="#C4C4C4"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,6 +38,8 @@
         android:layout_marginRight="162dp"
         android:layout_marginBottom="17dp"
         android:text="SET PROGRAM"
+        android:textColor="#C4C4C4"
+        app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -75,6 +78,7 @@
         android:layout_marginRight="30dp"
         android:gravity="center"
         android:text="DAY"
+        android:textColor="#C4C4C4"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,6 +93,7 @@
         android:layout_marginRight="20dp"
         android:gravity="center"
         android:text="AFTERNOON"
+        android:textColor="#C4C4C4"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/textView21"
         app:layout_constraintTop_toTopOf="parent" />
@@ -102,6 +107,7 @@
         android:layout_marginRight="20dp"
         android:gravity="center"
         android:text="NIGHT"
+        android:textColor="#C4C4C4"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

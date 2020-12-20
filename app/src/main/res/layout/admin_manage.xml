@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient">
+    android:background="@color/dark">
 
     <TextView
         android:id="@+id/ManageTitle"
@@ -17,7 +17,7 @@
         android:layout_marginRight="118dp"
         android:layout_marginBottom="535dp"
         android:text="Manage Staff"
-        android:textColor="#FFFFFF"
+        android:textColor="#C4C4C4"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,6 +48,8 @@
         android:layout_marginTop="356dp"
         android:layout_marginBottom="199dp"
         android:text="Fire"
+        android:textColor="#C4C4C4"
+        app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -62,6 +64,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="20dp"
         android:text="Back"
+        android:textColor="#C4C4C4"
+        app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
