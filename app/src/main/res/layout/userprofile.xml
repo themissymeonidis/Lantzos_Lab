@@ -5,19 +5,20 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@color/dark"
     tools:context="name">
 
     <RelativeLayout
         android:id="@+id/rellay1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="407dp"
+        android:layout_height="238dp"
         android:layout_marginBottom="470dp"
         android:background="@drawable/grad"
         android:paddingBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <RelativeLayout
             android:id="@+id/imgUser"
@@ -28,8 +29,8 @@
             android:background="@drawable/circle_border">
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
                 android:layout_marginStart="9dp"
                 android:layout_marginLeft="9dp"
                 android:layout_marginTop="9dp"
@@ -37,11 +38,11 @@
                 android:layout_marginRight="9dp"
                 android:layout_marginBottom="9dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/profile"
+                android:background="@drawable/profileuser"
+                android:backgroundTint="@color/black"
                 android:padding="3dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_user"
-                android:tint="#780F0F" />
+                android:src="@drawable/ic_user" />
 
         </RelativeLayout>
 
@@ -54,7 +55,7 @@
             android:layout_marginTop="15sp"
             android:fontFamily="sans-serif-light"
             android:text="My profile"
-            android:textColor="@color/black"
+            android:textColor="#C4C4C4"
             android:textSize="32sp"
             android:textStyle="bold" />
 
@@ -101,28 +102,30 @@
         android:layout_height="53dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/Back"
+        android:textColor="#C4C4C4"
+        app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uprofile_Gender"
-        app:layout_constraintVertical_bias="1.0"
         tools:text="Back" />
 
     <TextView
         android:id="@+id/Uprofile_Name"
         android:layout_width="95dp"
         android:layout_height="43dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:fontFamily="@font/aclonica"
         android:text="Name:"
+        android:textColor="#C4C4C4"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
 
     <TextView
         android:id="@+id/Uprofile_Address"
@@ -133,6 +136,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
         android:text="Address:"
+        android:textColor="#C4C4C4"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Uprofile_Name" />
@@ -146,6 +150,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
         android:text="Phone:"
+        android:textColor="#C4C4C4"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Uprofile_Address" />
@@ -159,6 +164,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
         android:text="Gender:"
+        android:textColor="#C4C4C4"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Uprofile_phone" />
@@ -172,6 +178,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
         android:text="Email:"
+        android:textColor="#C4C4C4"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Uprofile_Gender" />
@@ -182,16 +189,16 @@
         android:layout_height="53dp"
         android:layout_marginStart="89dp"
         android:layout_marginLeft="89dp"
-        android:layout_marginTop="608dp"
         android:layout_marginEnd="271dp"
         android:layout_marginRight="271dp"
+        android:layout_marginBottom="16dp"
         android:text="EDIT"
+        android:textColor="#C4C4C4"
+        app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.809"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button5"
@@ -215,17 +222,18 @@
         android:layout_height="43dp"
         android:layout_marginStart="182dp"
         android:layout_marginLeft="182dp"
-        android:layout_marginTop="300dp"
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:background="#FFFFFF"
-        android:enabled="false"
         android:ems="10"
+        android:enabled="false"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37" />
 
     <EditText
         android:id="@+id/get_phone"
@@ -237,8 +245,8 @@
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:background="#FFFFFF"
-        android:enabled="false"
         android:ems="10"
+        android:enabled="false"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
@@ -255,8 +263,8 @@
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:background="#FFFFFF"
-        android:enabled="false"
         android:ems="10"
+        android:enabled="false"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
@@ -288,8 +296,8 @@
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:background="#FFFFFF"
-        android:enabled="false"
         android:ems="10"
+        android:enabled="false"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
