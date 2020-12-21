@@ -148,6 +148,8 @@ public class adminManage extends AppCompatActivity {
                                                     }
                                                 });
                                     }
+                                    arrayList.remove(itemValue);
+                                    adapter.notifyDataSetChanged();
                                 }
                             }
                         });
