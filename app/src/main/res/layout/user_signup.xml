@@ -46,9 +46,8 @@
         android:hint="Password"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="214dp" />
+        tools:layout_editor_absoluteY="219dp" />
 
     <Button
         android:id="@+id/button10"

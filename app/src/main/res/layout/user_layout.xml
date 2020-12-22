@@ -6,32 +6,39 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
-    <ScrollView
-        android:layout_width="416dp"
-        android:layout_height="730dp"
-        tools:context=".MainActivity"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="2dp"
-        tools:ignore="MissingConstraints" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient" />
+        android:background="@drawable/gradient"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-155dp">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="114dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/home"
+            android:textSize="37sp"
+            app:fontFamily="@font/baloo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="114dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:text="Home"
-        android:textSize="37sp"
-        app:fontFamily="@font/baloo"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="76dp"
-        tools:ignore="MissingConstraints" />
+        <Button
+            android:id="@+id/btn_User_Lout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Log Out"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -52,6 +59,7 @@
             android:layout_weight="1">
 
             <RelativeLayout
+                android:id="@+id/relative5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#057381"
@@ -65,7 +73,7 @@
                     android:layout_below="@id/calendar"
 
                     android:layout_centerHorizontal="true"
-                    android:text="Calendar"
+                    android:text="@string/calendar"
                     android:textSize="25sp"
                     app:fontFamily="@font/aclonica" />
 
@@ -76,6 +84,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="#28D1B1"
+                    android:contentDescription="@string/calendar"
                     app:srcCompat="@drawable/calendar" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -87,6 +96,8 @@
             android:layout_weight="1">
 
             <RelativeLayout
+                android:id="@+id/relative6"
+                android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#057381">
@@ -98,7 +109,7 @@
                     android:layout_below="@id/myprofile"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="-2dp"
-                    android:text="My profile"
+                    android:text="@string/my_profile"
                     android:textSize="24sp"
                     app:fontFamily="@font/aclonica" />
 
@@ -109,6 +120,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="#002D88"
+                    android:contentDescription="@string/my_profile"
                     app:srcCompat="@drawable/profile" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -132,6 +144,7 @@
             android:layout_weight="1">
 
             <RelativeLayout
+                android:id="@+id/relative7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#057381">
@@ -143,7 +156,7 @@
                     android:layout_below="@id/todolist"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="9dp"
-                    android:text="TO DO LIST"
+                    android:text="@string/to_do_list"
                     android:textSize="24sp"
                     app:fontFamily="@font/aclonica" />
 
@@ -153,6 +166,7 @@
                     android:layout_height="78dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
+                    android:contentDescription="@string/to_do_list"
                     app:srcCompat="@drawable/todo" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -164,6 +178,8 @@
             android:layout_weight="1">
 
             <RelativeLayout
+                android:id="@+id/relative8"
+                android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#057381">
@@ -175,7 +191,7 @@
                     android:layout_below="@id/salary"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="Salary"
+                    android:text="@string/salary"
                     android:textSize="24sp" />
 
                 <ImageView
@@ -185,20 +201,10 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="#FFFFFF"
+                    android:contentDescription="@string/salary"
                     app:srcCompat="@drawable/salary" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="175dp"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
