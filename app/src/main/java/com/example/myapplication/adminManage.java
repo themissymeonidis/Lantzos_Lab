@@ -61,3 +61,48 @@ public class adminManage extends AppCompatActivity {
                 }
             }
         });
+        fire.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nametofire = firetext.getText().toString();
+                db.collection("Users").addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
+
+                        if (e !=null)
+                        {
+
+                        }
+
+                        for (DocumentChange documentChange : documentSnapshots.getDocumentChanges())
+                        {
+                            if (documentChange.getDocument().getData().get("Name").toString().equals(nametofire)) {
+
+                                String emailtofire = documentChange.getDocument().getData().get("UserEmail").toString();
+
+                                db.collection("Users").document(emailtofire)
+                                        .delete()
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
+                                                Toast.makeText(adminManage.this, "Deleted User " + emailtofire, Toast.LENGTH_SHORT).show();
+                                            }
+                                        })
+                                        .addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(adminManage.this, "An error occured while deleting " + nametofire, Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                            }
+                        }
+                    }
+                });
+
+
+
+
+            }
+        });
+    }
+}

@@ -6,15 +6,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
-
+    <?xml version="1.0" encoding="utf-8"?>
     <ScrollView
         android:layout_width="416dp"
         android:layout_height="730dp"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="2dp"
-        tools:ignore="MissingConstraints">
-
+        tools:layout_editor_absoluteY="2dp">
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
@@ -26,18 +24,10 @@
             />
     </ScrollView>
 
-    <Button
-        android:id="@+id/Alogout_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="logout"
-        tools:layout_editor_absoluteY="6dp"
-        tools:ignore="MissingConstraints" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient" ></androidx.constraintlayout.widget.ConstraintLayout>
+        android:background="@drawable/gradient"
 
 
     <LinearLayout
@@ -49,8 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="216dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="216dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="3dp"
@@ -59,8 +48,6 @@
             android:layout_weight="1">
 
             <RelativeLayout
-                android:id="@+id/calendar_admin"
-                android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#157381"
@@ -96,9 +83,7 @@
             android:layout_weight="1">
 
             <RelativeLayout
-                android:id="@+id/Admin_RelativeManage"
                 android:layout_width="match_parent"
-                android:clickable="true"
                 android:layout_height="match_parent"
                 android:background="#157381">
 
@@ -210,7 +195,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"/>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
+
+        </RelativeLayout>
+    </LinearLayout>
