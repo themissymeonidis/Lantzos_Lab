@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/dark</item>
+        <item name="android:weekNumberColor">@color/moredark</item>
+        <item name="android:unfocusedMonthDateColor">@color/purple_200</item>
+        <item name="android:headerYearTextAppearance">@color/purple_200</item>
+    </style>
+</resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient">
+    android:background="@color/dark">
 
     <TextView
         android:id="@+id/textView5"
@@ -50,6 +50,8 @@
         android:layout_marginRight="162dp"
         android:layout_marginBottom="17dp"
         android:text="BACK"
+        android:textColor="#C4C4C4"
+        app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,12 +67,12 @@
         android:layout_marginEnd="97dp"
         android:layout_marginRight="97dp"
         android:layout_marginBottom="493dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
