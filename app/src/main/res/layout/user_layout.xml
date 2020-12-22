@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@color/dark"
     tools:context=".MainActivity">
 
 
@@ -20,13 +20,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="User"
+            android:textColor="@color/teal_200"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/btn_User_Lout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Log Out"
-            android:textColor="#C4C4C4"
-            app:backgroundTint="#000000"
+            android:textColor="@color/dark"
+            android:textSize="18sp"
+            app:backgroundTint="@color/teal_200"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +53,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="175dp"
+        android:layout_marginTop="85dp"
         android:orientation="horizontal"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,7 +74,7 @@
                 android:id="@+id/relative5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark"
+                android:background="@color/moredark"
                 android:visibility="visible"
                 tools:visibility="visible">
 
@@ -68,9 +84,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/calendar"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:text="@string/calendar"
-                    android:textColor="#C4C4C4"
+                    android:textColor="@color/teal_200"
                     android:textSize="20sp"
                     app:fontFamily="@font/aclonica" />
 
@@ -80,7 +96,7 @@
                     android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="#FFFFFF"
+                    android:background="@color/moredark"
                     android:contentDescription="@string/calendar"
                     app:srcCompat="@drawable/calendar" />
             </RelativeLayout>
@@ -96,7 +112,7 @@
                 android:id="@+id/relative6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark"
+                android:background="@color/moredark"
                 android:clickable="true">
 
                 <TextView
@@ -105,9 +121,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/myprofile"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:text="My Profile"
-                    android:textColor="#C4C4C4"
+                    android:textColor="@color/teal_200"
                     android:textSize="20sp"
                     app:fontFamily="@font/aclonica" />
 
@@ -117,10 +133,10 @@
                     android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="#FFFFFF"
+                    android:background="@color/moredark"
                     android:contentDescription="@string/my_profile"
-                    app:srcCompat="@drawable/profile"
-                    tools:srcCompat="@drawable/profileuser" />
+                    app:srcCompat="@drawable/user"
+                    tools:srcCompat="@drawable/user" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -129,6 +145,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="175dp"
+        android:layout_marginTop="100dp"
         android:orientation="horizontal"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
@@ -147,7 +164,7 @@
                 android:id="@+id/relative7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark">
+                android:background="@color/moredark">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -155,9 +172,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/todolist"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:text="To Do List"
-                    android:textColor="#C4C4C4"
+                    android:textColor="@color/teal_200"
                     android:textSize="20sp"
                     app:fontFamily="@font/aclonica" />
 
@@ -167,9 +184,9 @@
                     android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="#FFFFFF"
+                    android:background="@color/moredark"
                     android:contentDescription="@string/to_do_list"
-                    app:srcCompat="@drawable/todo" />
+                    app:srcCompat="@drawable/note" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -183,7 +200,7 @@
                 android:id="@+id/relative8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark"
+                android:background="@color/moredark"
                 android:clickable="true">
 
                 <TextView
@@ -192,9 +209,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/salary"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:text="@string/salary"
-                    android:textColor="#C4C4C4"
+                    android:textColor="@color/teal_200"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -203,9 +220,9 @@
                     android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="#FFFFFF"
+                    android:background="@color/moredark"
                     android:contentDescription="@string/salary"
-                    app:srcCompat="@drawable/salary" />
+                    app:srcCompat="@drawable/gold" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

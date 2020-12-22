@@ -38,12 +38,7 @@ public class AdminProgram extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     int i, j, k;
     public int day, month, year;
-    List<String> arrayList;
-    List<String> arrayListArgiesMonth;
-    List<String> arrayListArgiesDays;
-    List<String> arrayListhours;
-    List<String> arrayListemails;
-    List<Integer> arrayListKeys;
+
     private static ArrayList<Type> mArrayList = new ArrayList<>();;
     String[] listes = {""};
     @Override
@@ -64,24 +59,12 @@ public class AdminProgram extends AppCompatActivity {
         Calendar startDate = Calendar.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        arrayList = new ArrayList<>();
-        arrayListhours = new ArrayList<>();
-        arrayListemails = new ArrayList<>();
-        arrayListKeys = new ArrayList<>();
-        arrayListArgiesMonth = new ArrayList<>();
-        arrayListArgiesDays = new ArrayList<>();
-
-        Collections.addAll(arrayList,listes);
-        Collections.addAll(arrayListhours,listes);
-        Collections.addAll(arrayListemails,listes);
-        Collections.addAll(arrayListArgiesMonth,listes);
-        Collections.addAll(arrayListArgiesDays,listes);
-
-        arrayList.remove(arrayList.get(0));
-        arrayListArgiesMonth.remove(arrayListArgiesMonth.get(0));
-        arrayListhours.remove(arrayListhours.get(0));
-        arrayListemails.remove(arrayListemails.get(0));
-        arrayListArgiesDays.remove(arrayListArgiesDays.get(0));
+        ArrayList<String> Names = new ArrayList<>();
+        ArrayList<String> Hours = new ArrayList<>();
+        ArrayList<String> Emails = new ArrayList<>();
+        ArrayList<Integer> Keys = new ArrayList<>();
+        ArrayList<String> ArgiesMonth = new ArrayList<>();
+        ArrayList<String> ArgiesDays = new ArrayList<>();
 
         String end = themis.replace("/", ".");
         String[] dates  = end.split("\\.");
@@ -104,11 +87,11 @@ public class AdminProgram extends AppCompatActivity {
                                     String[] ArgiesSplit  = Argies.split("\\.");
                                     String ArgDay = ArgiesSplit[0];
                                     String ArgMonth = ArgiesSplit[1];
-                                    arrayListArgiesDays.add(ArgDay);
-                                    arrayListArgiesMonth.add(ArgMonth);
+                                    ArgiesDays.add(ArgDay);
+                                    ArgiesMonth.add(ArgMonth);
 
                             }
-                            System.out.println("After Documents: " + arrayListArgiesDays + "/" + arrayListArgiesMonth);
+                            System.out.println("After Documents: " + ArgiesDays + "/" + ArgiesMonth);
                         } else {
                             Log.w(TAG, "Error getting documents.", task.getException());
                         }
@@ -130,13 +113,13 @@ public class AdminProgram extends AppCompatActivity {
                                     String name = document.getData().get("Name").toString();
                                     String hours = document.getData().get("HoursWorked").toString();
                                     int key = 0;
-                                    arrayListemails.add(email);
-                                    arrayListhours.add(hours);
-                                    arrayListKeys.add(key);
-                                    arrayList.add(name);
+                                    Emails.add(email);
+                                    Hours.add(hours);
+                                    Keys.add(key);
+                                    Names.add(name);
                                 }
                             }
-                            System.out.println("After Documents: " + arrayListArgiesDays + "/" + arrayListArgiesMonth);
+                            System.out.println("After Documents: " + ArgiesDays + "/" + ArgiesMonth);
                         } else {
                             Log.w(TAG, "Error getting documents.", task.getException());
                         }
@@ -162,7 +145,7 @@ public class AdminProgram extends AppCompatActivity {
                     String yi = valueOf(x);
                     dates[0] = yi;
 
-                    if (month == 2 && day == 29) {
+                    if (month == 2 && day == 28) {
                         day = 1;
                         month = month + 1;
                     }
@@ -185,9 +168,9 @@ public class AdminProgram extends AppCompatActivity {
                     System.out.println(day + "     =>     " + month);
                             boolean flag;
                             flag = false;
-                            for (int j=0;j<arrayListArgiesDays.size();j++) {
-                                int temporalDays = Integer.parseInt(arrayListArgiesDays.get(j));
-                                int temporalMonths = Integer.parseInt(arrayListArgiesMonth.get(j));
+                            for (int j=0;j<ArgiesDays.size();j++) {
+                                int temporalDays = Integer.parseInt(ArgiesDays.get(j));
+                                int temporalMonths = Integer.parseInt(ArgiesMonth.get(j));
                                 if (temporalDays == day && temporalMonths == month) {
                                     flag = true;
                                 }
@@ -195,48 +178,64 @@ public class AdminProgram extends AppCompatActivity {
 
                             System.out.println("FLAG  ===>   " + flag);
                             if (!flag) {
-                                System.out.println("Before Shorting: " + arrayList);
-                                System.out.println("Before Shorting: " + arrayListemails);
-                                System.out.println("Before Shorting: " + arrayListhours);
-                                System.out.println("Before Shorting: " + arrayListKeys);
+                                System.out.println("Before Shorting: " + Names);
+                                System.out.println("Before Shorting: " + Emails);
+                                System.out.println("Before Shorting: " + Hours);
+                                System.out.println("Before Shorting: " + Keys);
 
-                                for (j=0;j<arrayListhours.size();j++) {
-                                    for (int y=j+1;y<arrayListhours.size();y++) {
-                                        if (arrayListKeys.get(j) > arrayListKeys.get(y)) {
-                                            String temphours = arrayListhours.get(j);
-                                            String tempname = arrayList.get(j);
-                                            String tempemail = arrayListemails.get(j);
-                                            int tempkeys = arrayListKeys.get(j);
+                                for (j=0;j<Hours.size();j++) {
+                                    for (int y=j+1;y<Hours.size();y++) {
+                                        if (Keys.get(j) > Keys.get(y)) {
+                                            String temphours = Hours.get(j);
+                                            String tempname = Names.get(j);
+                                            String tempemail = Emails.get(j);
+                                            int tempkeys = Keys.get(j);
 
-                                            arrayListhours.set(j, arrayListhours.get(y));
-                                            arrayListhours.set(y, temphours);
-                                            arrayListKeys.set(j, arrayListKeys.get(y));
-                                            arrayListKeys.set(y, tempkeys);
-                                            arrayList.set(j, arrayList.get(y));
-                                            arrayList.set(y, tempname);
-                                            arrayListemails.set(j, arrayListemails.get(y));
-                                            arrayListemails.set(y, tempemail);
+                                            Hours.set(j, Hours.get(y));
+                                            Hours.set(y, temphours);
+                                            Keys.set(j, Keys.get(y));
+                                            Keys.set(y, tempkeys);
+                                            Names.set(j, Names.get(y));
+                                            Names.set(y, tempname);
+                                            Emails.set(j, Emails.get(y));
+                                            Emails.set(y, tempemail);
                                         }
                                     }
                                 }
-                                System.out.println("After Shorting: " + arrayList);
-                                System.out.println("After Shorting: " + arrayListemails);
-                                System.out.println("After Shorting: " + arrayListhours);
-                                System.out.println("After Shorting: " + arrayListKeys);
+                                int megethosAtomon = Names.size();
+                                int pyliko = megethosAtomon / NumOfShifts;
+                                int remainder = megethosAtomon % NumOfShifts;
+                                int counter = 0;
+                                i = 0;
+                                while (megethosAtomon > i) {
+
+                                        // shift(i) = atomo(i)
+                                    if(megethosAtomon - pyliko < counter)
+                                        // shift(i) = atomo (i)
+                                        // FlagAtomo(i) = true
+
+                                    counter++;
+                                    i++;
+                                }
+
+                                System.out.println("After Shorting: " + Names);
+                                System.out.println("After Shorting: " + Emails);
+                                System.out.println("After Shorting: " + Hours);
+                                System.out.println("After Shorting: " + Keys);
                                 Map<String, Object> ShiftsMap = new HashMap<>();
 
                                 for (i=0;i<NumOfShifts;i++){
-                                    DocumentReference UserHours = fStore.collection("Users").document(arrayListemails.get(i));
-                                    int prosthesi = Integer.parseInt(arrayListhours.get(i));
+                                    DocumentReference UserHours = fStore.collection("Users").document(Emails.get(i));
+                                    int prosthesi = Integer.parseInt(Hours.get(i));
                                     Map<String, Object> UserHoursMap = new HashMap<>();
                                     prosthesi = prosthesi + 8;
                                     String prosth = valueOf(prosthesi);
                                     UserHoursMap.put("HoursWorked", prosth);
-                                    arrayListhours.set(i, prosth);
-                                    arrayListKeys.set(i, arrayListKeys.get(i) + 1);
-                                    System.out.println("Shift =>  " + i + " =>  Tha doyleppsei =>  " + arrayList.get(i) + " Stis =>  " + date);
+                                    Hours.set(i, prosth);
+                                    Keys.set(i, Keys.get(i) + 1);
+                                    System.out.println("Shift =>  " + i + " =>  Tha doyleppsei =>  " + Names.get(i) + " Stis =>  " + date);
                                     int map = i+1;
-                                    ShiftsMap.put("Shift"+ map, arrayList.get(i));
+                                    ShiftsMap.put("Shift"+ map, Names.get(i));
                                     System.out.println("ShiftsMap:  =>    " + ShiftsMap);
                                     UserHours.update(UserHoursMap);
                                 }
@@ -250,10 +249,10 @@ public class AdminProgram extends AppCompatActivity {
                             }
                     day = day + 1;
                 }
-                System.out.println("After Placing Shifts: " + arrayList);
-                System.out.println("After Placing Shifts: " + arrayListemails);
-                System.out.println("After Placing Shifts: " + arrayListhours);
-                System.out.println("After Placing Shifts: " + arrayListKeys);
+                System.out.println("After Placing Shifts: " + Names);
+                System.out.println("After Placing Shifts: " + Emails);
+                System.out.println("After Placing Shifts: " + Hours);
+                System.out.println("After Placing Shifts: " + Keys);
             }
         });
     }
