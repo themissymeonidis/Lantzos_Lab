@@ -18,7 +18,7 @@
         android:layout_marginEnd="106dp"
         android:layout_marginRight="106dp"
         android:layout_marginBottom="522dp"
-        android:text="@string/admin_signup"
+        android:text="Register"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#C4C4C4"
         android:textSize="30sp"

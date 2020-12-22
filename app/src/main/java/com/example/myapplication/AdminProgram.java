@@ -165,6 +165,12 @@ public class AdminProgram extends AppCompatActivity {
                         month = 1;
                     }
 
+                    if (day == 1) {
+                        for(i=0;i < Names.size();i++) {
+                            Hours.set(i, "0");
+                        }
+                    }
+
                     System.out.println(day + "     =>     " + month);
                             boolean flag;
                             flag = false;
@@ -182,6 +188,9 @@ public class AdminProgram extends AppCompatActivity {
                                 System.out.println("Before Shorting: " + Emails);
                                 System.out.println("Before Shorting: " + Hours);
                                 System.out.println("Before Shorting: " + Keys);
+
+
+                                /// kane Case Switch baze mesa sta case ta HashMaps kai ta Documents meta thn case
 
                                 for (j=0;j<Hours.size();j++) {
                                     for (int y=j+1;y<Hours.size();y++) {
@@ -225,6 +234,7 @@ public class AdminProgram extends AppCompatActivity {
                                 Map<String, Object> ShiftsMap = new HashMap<>();
 
                                 for (i=0;i<NumOfShifts;i++){
+                                    //for j < atomabardies.size()
                                     DocumentReference UserHours = fStore.collection("Users").document(Emails.get(i));
                                     int prosthesi = Integer.parseInt(Hours.get(i));
                                     Map<String, Object> UserHoursMap = new HashMap<>();
