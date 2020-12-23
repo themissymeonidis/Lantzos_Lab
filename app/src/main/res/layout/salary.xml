@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient">
+    android:background="@color/dark">
 
 
     <EditText
         android:id="@+id/editTextNumber2"
         android:layout_width="196dp"
-        android:layout_height="38dp"
+        android:layout_height="46dp"
         android:layout_marginStart="173dp"
         android:layout_marginLeft="173dp"
         android:layout_marginTop="239dp"
@@ -20,6 +20,7 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="number"
+        android:textColor="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +38,7 @@
         android:layout_marginEnd="251dp"
         android:layout_marginRight="251dp"
         android:layout_marginBottom="279dp"
+        android:background="@color/dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +47,7 @@
     <TextView
         android:id="@+id/textView23"
         android:layout_width="117dp"
-        android:layout_height="37dp"
+        android:layout_height="46dp"
         android:layout_marginStart="43dp"
         android:layout_marginLeft="43dp"
         android:layout_marginTop="239dp"
@@ -60,7 +62,7 @@
     <TextView
         android:id="@+id/textView24"
         android:layout_width="117dp"
-        android:layout_height="37dp"
+        android:layout_height="41dp"
         android:layout_marginStart="43dp"
         android:layout_marginLeft="43dp"
         android:layout_marginTop="188dp"
@@ -74,8 +76,8 @@
 
     <TextView
         android:id="@+id/textView25"
-        android:layout_width="117dp"
-        android:layout_height="37dp"
+        android:layout_width="114dp"
+        android:layout_height="44dp"
         android:layout_marginStart="43dp"
         android:layout_marginLeft="43dp"
         android:layout_marginTop="141dp"
@@ -91,14 +93,15 @@
         android:id="@+id/user_login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="490dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="88dp"
         android:text="@string/calculate"
+        android:textColor="#C4C4C4"
         android:textStyle="bold"
+        app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/admin_login_btn"
@@ -106,11 +109,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="538dp"
         android:layout_marginBottom="17dp"
+        android:textColor="#C4C4C4"
         android:textStyle="bold"
+        app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89"
+        tools:text="back" />
 
     <TextView
         android:id="@+id/textView11"
@@ -127,8 +134,8 @@
 
     <EditText
         android:id="@+id/editTextNumberDecimal"
-        android:layout_width="196dp"
-        android:layout_height="37dp"
+        android:layout_width="194dp"
+        android:layout_height="44dp"
         android:layout_marginStart="173dp"
         android:layout_marginLeft="173dp"
         android:layout_marginTop="140dp"
@@ -138,6 +145,8 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
+        android:textColor="#C4C4C4"
+        android:textColorHint="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,7 +157,7 @@
     <EditText
         android:id="@+id/editTextNumber"
         android:layout_width="196dp"
-        android:layout_height="38dp"
+        android:layout_height="45dp"
         android:layout_marginStart="173dp"
         android:layout_marginLeft="173dp"
         android:layout_marginTop="188dp"
@@ -158,6 +167,7 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="number"
+        android:textColor="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -175,6 +185,8 @@
         android:layout_marginEnd="42dp"
         android:layout_marginRight="42dp"
         android:layout_marginBottom="280dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

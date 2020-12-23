@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/gradient"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/dark">
 
     <TextView
         android:id="@+id/textView10"
@@ -13,6 +12,7 @@
         android:layout_height="35dp"
         android:text="Admin Sign Up"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#C4C4C4"
         android:textSize="30sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="105dp"
@@ -23,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
+        android:textColor="#C4C4C4"
         android:textStyle="bold"
         app:backgroundTint="#000000"
         tools:layout_editor_absoluteX="159dp"
@@ -33,7 +34,9 @@
         android:layout_width="184dp"
         android:layout_height="40dp"
         android:text="I'm not a Robot"
+        android:textColor="#C4C4C4"
         android:textStyle="bold"
+        app:buttonTint="#C4C4C4"
         tools:layout_editor_absoluteX="101dp"
         tools:layout_editor_absoluteY="338dp" />
 
@@ -44,6 +47,8 @@
         android:ems="10"
         android:hint=" Re-enter Password"
         android:inputType="textPersonName"
+        android:textColorHint="#C4C4C4"
+        android:textColorLink="#C4C4C4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -57,6 +62,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName"
+        android:textColorHint="#C4C4C4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,6 +75,8 @@
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textPersonName"
+        android:textColor="#C4C4C4"
+        android:textColorHint="#C4C4C4"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="153dp" />
