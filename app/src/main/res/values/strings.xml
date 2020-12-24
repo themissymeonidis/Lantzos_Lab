@@ -91,4 +91,5 @@
     <string name="address">Address</string>
     <string name="name">Name</string>
     <string name="fullname">Full-Name</string>
+    <string name="select_an_employee_to_fire">Select an employee to fire:</string>
 </resources>

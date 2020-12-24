@@ -91,7 +91,7 @@ public class adminManage extends AppCompatActivity {
 
 
                 layoutInflater = (LayoutInflater) getApplication().getSystemService(LAYOUT_INFLATER_SERVICE);
-                ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.popup, null);
+                ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.admin_popup, null);
 
                 popupWindow = new PopupWindow(container, 1000, 2000, true);
                 //popupWindow.showAtLocation(layout, Gravity.BOTTOM, 10, 10);

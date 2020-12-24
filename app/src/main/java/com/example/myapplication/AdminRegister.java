@@ -34,7 +34,7 @@ public class  AdminRegister extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_register);
+        setContentView(R.layout.admin_register);
 
         mEmail = findViewById(R.id.Admin_Mail);
         mPassword = findViewById(R.id.Admin_Pass);
