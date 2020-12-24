@@ -15,58 +15,11 @@
         android:textColor="#C4C4C4"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="42dp" />
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:textColor="#C4C4C4"
-        android:textStyle="bold"
-        app:backgroundTint="#000000"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="423dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="184dp"
-        android:layout_height="40dp"
-        android:text="I'm not a Robot"
-        android:textColor="#C4C4C4"
-        android:textStyle="bold"
-        app:buttonTint="#C4C4C4"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="338dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint=" Re-enter Password"
-        android:inputType="textPersonName"
-        android:textColorHint="#C4C4C4"
-        android:textColorLink="#C4C4C4"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="279dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        android:textColorHint="#C4C4C4"
-        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="219dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
 
     <EditText
         android:id="@+id/editTextTextPersonName6"
@@ -78,8 +31,72 @@
         android:textColor="#C4C4C4"
         android:textColorHint="#C4C4C4"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="153dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.988" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:textColorHint="#C4C4C4"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:text="I'm not a Robot"
+        android:textColor="#C4C4C4"
+        android:textStyle="bold"
+        app:buttonTint="#C4C4C4"
+        app:layout_constraintBottom_toTopOf="@+id/button12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.932" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="#C4C4C4"
+        android:textStyle="bold"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.655" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint=" Re-enter Password"
+        android:inputType="textPersonName"
+        android:textColorHint="#C4C4C4"
+        android:textColorLink="#C4C4C4"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.876" />
 
     <TextView
         android:id="@+id/textView18"

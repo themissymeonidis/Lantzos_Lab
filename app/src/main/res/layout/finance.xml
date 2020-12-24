@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,10 +8,15 @@
     android:background="@color/dark">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
         android:layout_width="336dp"
         android:layout_height="339dp"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="174dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.375" />
 
     <TextView
         android:id="@+id/textView14"
@@ -18,8 +24,12 @@
         android:layout_height="41dp"
         android:text="Month:"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="5dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
 
     <TextView
         android:id="@+id/textView17"
@@ -27,8 +37,12 @@
         android:layout_height="wrap_content"
         android:text="Income:"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="46dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077" />
 
     <TextView
         android:id="@+id/textView20"
@@ -36,8 +50,12 @@
         android:layout_height="wrap_content"
         android:text="Expenses:"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="86dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
 
     <Button
         android:id="@+id/button15"
@@ -45,6 +63,10 @@
         android:layout_height="wrap_content"
         android:text="BACK"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="538dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
 </androidx.constraintlayout.widget.ConstraintLayout>
