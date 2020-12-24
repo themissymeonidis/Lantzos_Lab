@@ -109,6 +109,26 @@ public class AdminProgram extends AppCompatActivity {
                     }
                 });
 
+        for (j=0;j<Hours.size();j++) {
+                                    for (int y=j+1;y<Hours.size();y++) {
+                                        if (Keys.get(j) > Keys.get(y)) {
+                                            int temphours = Hours.get(j);
+                                            String tempname = Names.get(j);
+                                            String tempemail = Emails.get(j);
+                                            int tempkeys = Keys.get(j);
+
+                                            Hours.set(j, Hours.get(y));
+                                            Hours.set(y, temphours);
+                                            Keys.set(j, Keys.get(y));
+                                            Keys.set(y, tempkeys);
+                                            Names.set(j, Names.get(y));
+                                            Names.set(y, tempname);
+                                            Emails.set(j, Emails.get(y));
+                                            Emails.set(y, tempemail);
+                                        }
+                                    }
+                                }
+
 
 
             tryouts.setOnClickListener(view -> {
@@ -200,6 +220,7 @@ public class AdminProgram extends AppCompatActivity {
                                 Map<String, Object> ShiftsMap = new HashMap<>();
 
                                 int counter = 0;
+                                int anticounter = Names.size() - 1;
                                 for (i = 0 ;i < NumOfShifts ; i++){
 
                                     StringBuilder NamesForShifts = new StringBuilder();
@@ -220,15 +241,16 @@ public class AdminProgram extends AppCompatActivity {
                                         String tempemail = Emails.get(counter);
                                         int tempkeys = Keys.get(counter);
 
-                                        Hours.set(counter, Hours.get(ArrayLenght - 1));
-                                        Hours.set(ArrayLenght -1, temphours);
-                                        Keys.set(counter, Keys.get(ArrayLenght - 1));
-                                        Keys.set(ArrayLenght -1, tempkeys);
-                                        Names.set(counter, Names.get(ArrayLenght -1));
-                                        Names.set(ArrayLenght -1, tempname);
-                                        Emails.set(counter, Emails.get(ArrayLenght -1 ));
-                                        Emails.set(ArrayLenght-1, tempemail);
+                                        Hours.set(counter, Hours.get(anticounter));
+                                        Hours.set(anticounter, temphours);
+                                        Keys.set(counter, Keys.get(anticounter));
+                                        Keys.set(anticounter, tempkeys);
+                                        Names.set(counter, Names.get(anticounter));
+                                        Names.set(anticounter, tempname);
+                                        Emails.set(counter, Emails.get(anticounter));
+                                        Emails.set(anticounter, tempemail);
                                         counter = counter + 1;
+                                        anticounter = anticounter - 1;
 
                                     }
                                     int map = i+1;

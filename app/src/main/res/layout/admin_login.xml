@@ -27,15 +27,15 @@
         android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
         android:text="Log IN"
-        android:textColor="#C4C4C4"
+        android:textColor="@color/dark"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:backgroundTint="#000000"
+        app:backgroundTint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9"
         app:rippleColor="#EF0183" />
 
     <CheckBox
@@ -73,8 +73,8 @@
 
     <EditText
         android:id="@+id/Email2"
-        android:layout_width="207dp"
-        android:layout_height="39dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textPersonName"

@@ -40,13 +40,13 @@
     <Button
         android:id="@+id/btn_User_Info"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="159dp"
         android:layout_marginLeft="159dp"
         android:layout_marginEnd="164dp"
         android:layout_marginRight="164dp"
         android:text="@string/signup1"
-        android:textColor="@color/grey"
+        android:textColor="@color/dark"
         android:textSize="18sp"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,7 +58,7 @@
 
     <EditText
         android:id="@+id/User_Phone"
-        android:layout_width="225dp"
+        android:layout_width="220dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:autofillHints=""
@@ -74,13 +74,13 @@
 
     <EditText
         android:id="@+id/User_Address"
-        android:layout_width="229dp"
+        android:layout_width="220dp"
         android:layout_height="41dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="@string/address"
         android:importantForAutofill="no"
         android:inputType="text"
-        android:hint="@string/address"
         android:textColor="#C4C4C4"
         android:textColorHint="#C4C4C4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,23 +91,16 @@
 
     <EditText
         android:id="@+id/User_Name"
-        android:layout_width="224dp"
+        android:layout_width="220dp"
         android:layout_height="42dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginRight="98dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
+        android:hint="@string/fullname"
         android:importantForAutofill="no"
         android:inputType="text"
-        android:hint="@string/fullname"
         android:textColor="#C4C4C4"
         android:textColorHint="#C4C4C4"
-        app:layout_constraintBottom_toTopOf="@+id/User_Address"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 

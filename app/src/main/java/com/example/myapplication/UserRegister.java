@@ -33,7 +33,7 @@ public class UserRegister extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_signup);
+        setContentView(R.layout.user_register);
 
         mEmail = findViewById(R.id.User_Signup_Email);
         mPassword = findViewById(R.id.User_Signup_pass);
@@ -70,6 +70,12 @@ public class UserRegister extends AppCompatActivity {
                         Log.w(UserRegister.TAG, "Error getting documents.", task.getException());
                     }
                 });
+                for (int i = 0 ; i < Index.size() ; i++) {
+                if (nextId < Index.get(i)) {
+                    nextId = Index.get(i);
+                    }
+                }
+        nextId = nextId + 1;
 
 
                 mSignUpBtn.setOnClickListener(view -> {
@@ -98,14 +104,6 @@ public class UserRegister extends AppCompatActivity {
                     }
                     if(valid){
                         fAuth.createUserWithEmailAndPassword(email,password).addOnSuccessListener(authResult -> {
-
-                            for (int i = 0 ; i < Index.size() ; i++) {
-                                if (nextId > Index.get(i)) {
-
-                                    nextId = Index.get(i);
-                                }
-                            }
-                            nextId = nextId + 1;
 
                             FirebaseUser User = fAuth.getCurrentUser();
                             Toast.makeText(UserRegister.this, "Profile Created", Toast.LENGTH_SHORT).show();

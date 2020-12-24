@@ -5,9 +5,7 @@
     <string name="user">Button</string>
     <string name="password">Password:</string>
     <string name="e_mail">E-mail:</string>
-    <string name="not_a_member">Not a member?</string>
     <string name="sign_in">Sign in</string>
-    <string name="sign_in_as_administrator">Sign in as Administrator</string>
     <string name="sign_in_as_user">Sign in as User</string>
     <string name="sign_up">Sign up</string>
     <string name="username">Username:</string>
@@ -91,4 +89,7 @@
     <string name="address">Address</string>
     <string name="name">Name</string>
     <string name="fullname">Full-Name</string>
+    <string name="todologo">TodoLogo</string>
+    <string name="log_out">Log Out</string>
+    <string name ="select_an_employee_to_fire">Select An Employee To Fire</string>
 </resources>

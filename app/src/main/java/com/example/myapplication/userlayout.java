@@ -26,12 +26,8 @@ public class userlayout extends AppCompatActivity {
         Button logout= (Button) findViewById(R.id.btn_User_Lout);
         RelativeLayout relativeclick1 =(RelativeLayout)findViewById(R.id.relative8);
         RelativeLayout userinfo = (RelativeLayout) findViewById(R.id.relative6);
-        relativeclick1.setOnClickListener(new View.OnClickListener(){
 
-            public void onClick(View v){
-                startActivity(new Intent(getApplicationContext(),Salary.class));
-            }
-        });
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
