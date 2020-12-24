@@ -7,47 +7,38 @@
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <Button
-            android:id="@+id/Alogout_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:background="@color/teal_200"
-            android:text="logout"
-            android:textColor="@color/dark"
-            android:textSize="18sp"
-            app:backgroundTint="@color/teal_200"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <ScrollView
+        android:layout_width="416dp"
+        android:layout_height="730dp"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="2dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Admin"
-            android:textColor="@color/teal_200"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Home"
+            android:textSize="37sp"
+            />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/Alogout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="logout"
+        tools:layout_editor_absoluteY="6dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient" ></androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -55,12 +46,10 @@
         android:layout_height="175dp"
         android:orientation="horizontal"
         android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteY="216dp"
         tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
@@ -71,10 +60,10 @@
 
             <RelativeLayout
                 android:id="@+id/calendar_admin"
+                android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/moredark"
-                android:clickable="true"
+                android:background="#157381"
                 android:visibility="visible"
                 tools:visibility="visible">
 
@@ -84,19 +73,18 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/calendar"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="14dp"
                     android:text="Calendar"
-                    android:textColor="@color/teal_200"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/calendar"
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
+                    android:layout_width="95dp"
+                    android:layout_height="66dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="@color/moredark"
+                    android:background="#28D1B1"
                     app:srcCompat="@drawable/calendar" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -110,11 +98,9 @@
             <RelativeLayout
                 android:id="@+id/Admin_RelativeManage"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/moredark"
                 android:clickable="true"
-                android:visibility="visible"
-                tools:visibility="visible">
+                android:layout_height="match_parent"
+                android:background="#157381">
 
                 <TextView
                     android:id="@+id/textView4"
@@ -122,20 +108,19 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/imageView3"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="-2dp"
                     android:text="Employees"
-                    android:textColor="#C4C4C4"
-                    android:textSize="20sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
+                    android:layout_width="69dp"
+                    android:layout_height="83dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="@color/moredark"
-                    app:srcCompat="@drawable/team" />
+                    android:background="#002D88"
+                    app:srcCompat="@drawable/download" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -144,14 +129,12 @@
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="175dp"
-        android:layout_marginTop="100dp"
         android:orientation="horizontal"
         android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
@@ -162,7 +145,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/moredark">
+                android:background="#157381">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -170,20 +153,18 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/Finance"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="9dp"
                     android:text="Finance"
-                    android:textColor="#C4C4C4"
-                    android:textSize="20sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/Finance"
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="@color/moredark"
-                    app:srcCompat="@drawable/safe" />
+                    app:srcCompat="@drawable/money" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -194,10 +175,9 @@
             android:layout_weight="1">
 
             <RelativeLayout
-                android:id="@+id/relativeTodo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/moredark">
+                android:background="#157381">
 
                 <TextView
                     android:id="@+id/textView7"
@@ -205,23 +185,32 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/chat"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:text="To Do List"
-                    android:textColor="#C4C4C4"
-                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:text="TO DO LIST"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/chat"
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:background="@color/moredark"
-                    app:srcCompat="@drawable/note" />
+                    android:background="#FFFFFF"
+                    app:srcCompat="@drawable/todo" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="175dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
