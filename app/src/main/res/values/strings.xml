@@ -61,6 +61,14 @@
     <string name="month">Month:</string>
     <string name="shifts">Shifts</string>
     <string name="logo">logo</string>
+    <string name="gender">Gender</string>
+    <string name="edit">Edit</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="yourname">Your Name</string>
+    <string name="yourphone">Your Phone</string>
+    <string name="yourgender">Your Gender</string>
+    <string name="youremail">Your Email</string>
+    <string name="youraddress">Your Address</string>
     <string name="days">Days</string>
     <string name="workonweekend">Work On Weekend</string>
     <string name="hints">Hints</string>
