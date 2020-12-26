@@ -24,7 +24,7 @@
         android:layout_marginBottom="430dp"
         android:background="@drawable/circlebackground"
         android:gravity="center"
-        android:text="X"
+        android:text="@string/close"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,14 +55,15 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/imagedesc" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
-            android:text="Barack Obama"
+            android:text="@string/barackobama"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
@@ -71,17 +72,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
-            android:text="Washington,US"
+            android:text="@string/washingtonus"
             android:textColor="@color/white" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
     </LinearLayout>
 
     <LinearLayout
@@ -105,14 +97,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Working Hours"
+            android:text="@string/workinghours"
             android:textColor="@color/white"
             android:textSize="17sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="150"
+            android:text="@string/numberexample"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -138,14 +130,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="E-mail"
+            android:text="@string/email"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="150"
+            android:text="@string/numberexample"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -169,14 +161,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Telephone"
+            android:text="@string/phone"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="6912345678"
+            android:text="@string/phonenumberexample"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -186,8 +178,7 @@
         android:id="@+id/fire_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fire
-"
+        android:text="@string/fire"
         app:backgroundTint="@color/material_on_background_emphasis_high_type"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/next_user"
@@ -196,12 +187,13 @@
         app:layout_constraintVertical_bias="0.94"
         tools:ignore="MissingConstraints" />
 
+    <!--suppress AndroidMissingOnClickHandler -->
     <Button
         android:id="@+id/previous_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="previous_user"
-        android:text="Previous"
+        android:text="@string/previous"
         app:backgroundTint="@color/material_on_background_emphasis_high_type"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -211,12 +203,13 @@
         app:layout_constraintVertical_bias="0.94"
         tools:ignore="MissingConstraints" />
 
+    <!--suppress AndroidMissingOnClickHandler -->
     <Button
         android:id="@+id/next_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="next_user2"
-        android:text="Next"
+        android:text="@string/next"
         app:backgroundTint="@color/material_on_background_emphasis_high_type"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

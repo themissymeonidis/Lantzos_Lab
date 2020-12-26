@@ -43,7 +43,9 @@
                 android:backgroundTint="@color/teal_200"
                 android:padding="3dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_user" />
+                android:src="@drawable/ic_user"
+                tools:ignore="UnusedAttribute"
+                android:contentDescription="@string/logo" />
 
         </RelativeLayout>
 
@@ -55,7 +57,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15sp"
             android:fontFamily="sans-serif-light"
-            android:text="My profile"
+            android:text="@string/my_profile"
             android:textColor="@color/teal_200"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -80,7 +82,10 @@
             android:layout_marginRight="15dp"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_settings" />
+            android:src="@drawable/ic_settings"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="@string/logo" />
 
     </RelativeLayout>
 
@@ -110,7 +115,7 @@
         app:backgroundTint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="Back" />
 
@@ -121,7 +126,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:fontFamily="@font/aclonica"
-        android:text="Name:"
+        android:text="@string/name"
         android:textColor="#C4C4C4"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -135,11 +140,13 @@
         android:layout_height="43dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/aclonica"
-        android:text="Address:"
+        android:text="@string/address"
         android:textColor="#C4C4C4"
         android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/get_address"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Uprofile_Name" />
 
@@ -151,7 +158,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
-        android:text="Phone:"
+        android:text="@string/phone"
         android:textColor="#C4C4C4"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -165,7 +172,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
-        android:text="Gender:"
+        android:text="@string/gender"
         android:textColor="#C4C4C4"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -179,7 +186,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
-        android:text="Email:"
+        android:text="@string/email"
         android:textColor="#C4C4C4"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -194,30 +201,34 @@
         android:layout_marginEnd="271dp"
         android:layout_marginRight="271dp"
         android:layout_marginBottom="16dp"
-        android:text="EDIT"
+        android:text="@string/edit"
         android:textColor="@color/dark"
         android:textSize="18sp"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="114dp"
+        android:layout_height="53dp"
         android:layout_marginStart="194dp"
         android:layout_marginLeft="194dp"
-        android:layout_marginTop="608dp"
         android:layout_marginEnd="158dp"
         android:layout_marginRight="158dp"
-        android:text="CONFIRM"
-        android:visibility="invisible"
+        android:layout_marginBottom="16dp"
+        android:text="@string/confirm"
+        android:textColor="@color/dark"
+        android:visibility="visible"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.672"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/get_name"
@@ -228,6 +239,7 @@
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:background="@color/moredark"
+        android:hint="@string/yourname"
         android:ems="10"
         android:enabled="false"
         android:inputType="textPersonName"
@@ -237,7 +249,8 @@
         app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.37" />
+        app:layout_constraintVertical_bias="0.37"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/get_phone"
@@ -249,14 +262,16 @@
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:background="@color/moredark"
+        android:hint="@string/yourphone"
         android:ems="10"
         android:enabled="false"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/get_address" />
+        app:layout_constraintTop_toBottomOf="@+id/get_address"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/get_gender"
@@ -268,6 +283,7 @@
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:background="@color/moredark"
+        android:hint="@string/yourgender"
         android:ems="10"
         android:enabled="false"
         android:inputType="textPersonName"
@@ -275,7 +291,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/get_phone" />
+        app:layout_constraintTop_toBottomOf="@+id/get_phone"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/get_email"
@@ -285,13 +302,15 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@color/moredark"
+        android:hint="@string/youremail"
         android:ems="10"
         android:enabled="false"
         android:focusable="false"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/get_gender" />
+        app:layout_constraintTop_toBottomOf="@+id/get_gender"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/get_address"
@@ -303,6 +322,7 @@
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:background="@color/moredark"
+        android:hint="@string/youraddress"
         android:ems="10"
         android:enabled="false"
         android:inputType="textPersonName"
@@ -310,7 +330,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/get_name" />
+        app:layout_constraintTop_toBottomOf="@+id/get_name"
+        android:autofillHints="" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
