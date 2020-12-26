@@ -25,6 +25,7 @@ public class adminlayout extends AppCompatActivity {
         setContentView(R.layout.admin_layout);
         RelativeLayout relativeclick1 =(RelativeLayout)findViewById(R.id.calendar_admin);
         RelativeLayout gotomanage =(RelativeLayout)findViewById(R.id.Admin_RelativeManage);
+        RelativeLayout todo =(RelativeLayout)findViewById(R.id.relativeTodo);
 
 
 
@@ -54,6 +55,12 @@ public class adminlayout extends AppCompatActivity {
             }
         });
 
+        todo.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+                startActivity(new Intent(getApplicationContext(),AdminTodo.class));
+            }
+        });
 
 
     }

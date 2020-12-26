@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -32,7 +34,7 @@ public class AdminTodo extends AppCompatActivity {
     List<String> arrayList;
     EditText items;
     ListView itemlist;
-    Button add, delete;
+    Button add, delete, back;
     ArrayAdapter<String> adapter;
     FirebaseFirestore fStore;
 
@@ -44,6 +46,7 @@ public class AdminTodo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_todo);
+        back = (Button) findViewById(R.id.button10);
         add = (Button) findViewById(R.id.add_btn);
         delete = (Button) findViewById(R.id.delete_btn);
         items = (EditText) findViewById(R.id.item_edit_text);
@@ -54,23 +57,14 @@ public class AdminTodo extends AppCompatActivity {
 
         fStore = FirebaseFirestore.getInstance();
 
-//        itemlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                SparseBooleanArray sp = itemlist.getCheckedItemPositions();
-//
-//                StringBuilder sb= new StringBuilder();
-//
-//                for(int i=0;i<sp.size();i++){
-//                    if(sp.valueAt(i)==true){
-//                         String s = ((CheckedTextView) itemlist.getChildAt(i)).getText().toString();
-//                        sb = sb.append(" "+s);
-//                    }
-//                }
-//                Toast.makeText(AdminTodo.this, "Selected items are: "+sb.toString(), Toast.LENGTH_LONG).show();
-//            }
-//        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Log.d("MyApp",items.getText().toString());
+
+                                    }
+                                });
 
         //////// Diabazei Basi Arxi ///////
 
@@ -91,7 +85,6 @@ public class AdminTodo extends AppCompatActivity {
                                     Emails.add(email);
                                 }
                             }
-                            System.out.println("After Documents: " + Names + "/" + Emails);
                         } else {
 
                         }
@@ -107,24 +100,28 @@ public class AdminTodo extends AppCompatActivity {
         itemlist.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         itemlist.setAdapter(adapter);
 
+        String s = items.getText().toString();
+        if(s != "") {
+            add.setVisibility(View.VISIBLE);
+        }
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 arrayList.add(items.getText().toString());
                 adapter.notifyDataSetChanged();
-                items.setText("");
+
                 //////// Grafei Basi Arxi ///////
 
                 Map<String, Object> UserTodo = new HashMap<>();
 
-                UserTodo.put("ToDo", "pragma 100");
-                System.out.println(UserTodo);
-                System.out.println(Emails.size());
+                UserTodo.put("ToDo", items.getText().toString());
                 for(int i=0;i < Emails.size();i++) {
                     DocumentReference users = fStore.collection("Users").document(Emails.get(i));
                     users.update(UserTodo);
                     System.out.println(Emails.get(i));
                 }
+                items.setText("");
                 //////// Grafei Basi Telos ///////
             }
         });
