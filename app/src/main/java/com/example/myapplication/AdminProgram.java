@@ -1,33 +1,23 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import com.google.android.gms.tasks.OnCompleteListener;
 
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import static java.lang.String.valueOf;
@@ -38,29 +28,31 @@ public class AdminProgram extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     int i, j, k;
     public int day, month, year;
+    EditText title,numofdaystext,numofshiftstext;
+    Button tryouts;
+    CheckBox checkBox;
 
-    private static ArrayList<Type> mArrayList = new ArrayList<>();;
-    String[] listes = {""};
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.program_admin);
 
-        final CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
-        EditText title = (EditText) findViewById(R.id.editTextDate);
-        EditText numofdaystext = (EditText) findViewById(R.id.NumOfDays);
-        EditText numofshiftstext = (EditText) findViewById(R.id.NumOfShifts);
-        Button tryouts = (Button) findViewById(R.id.button6);
+        checkBox = findViewById(R.id.checkBox);
+        title = findViewById(R.id.editTextDate);
+        numofdaystext = findViewById(R.id.NumOfDays);
+        numofshiftstext = findViewById(R.id.NumOfShifts);
+        tryouts = findViewById(R.id.button6);
         Intent intent = getIntent();
         String themis = intent.getExtras().getString("epuzzle");
 
+
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-        Calendar startDate = Calendar.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         ArrayList<String> Names = new ArrayList<>();
-        ArrayList<String> Hours = new ArrayList<>();
+        ArrayList<Integer> Hours = new ArrayList<>();
         ArrayList<String> Emails = new ArrayList<>();
         ArrayList<Integer> Keys = new ArrayList<>();
         ArrayList<String> ArgiesMonth = new ArrayList<>();
@@ -72,79 +64,81 @@ public class AdminProgram extends AppCompatActivity {
         month = Integer.parseInt(dates[1]);
         year = Integer.parseInt(dates[2]);
         month = month + 1;
-        dates[1] = dates[1] + 1;
+        title.setText(day + "/" + month + "/" + year);
 
         db.collection("Argies")
                 .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                                String Argies = document.getId();
+                                String[] ArgiesSplit  = Argies.split("\\.");
+                                String ArgDay = ArgiesSplit[0];
+                                String ArgMonth = ArgiesSplit[1];
+                                ArgiesDays.add(ArgDay);
+                                ArgiesMonth.add(ArgMonth);
 
-                    @RequiresApi(api = Build.VERSION_CODES.N)
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                    String Argies = document.getId();
-                                    String[] ArgiesSplit  = Argies.split("\\.");
-                                    String ArgDay = ArgiesSplit[0];
-                                    String ArgMonth = ArgiesSplit[1];
-                                    ArgiesDays.add(ArgDay);
-                                    ArgiesMonth.add(ArgMonth);
-
-                            }
-                            System.out.println("After Documents: " + ArgiesDays + "/" + ArgiesMonth);
-                        } else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
                         }
+                        System.out.println("After Documents: " + ArgiesDays + "/" + ArgiesMonth);
+                    } else {
+                        Log.w(TAG, "Error getting documents.", task.getException());
                     }
                 });
 
         db.collection("Users")
                 .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-
-                    @RequiresApi(api = Build.VERSION_CODES.N)
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                if (document.getData().get("isAdmin").toString().equals("0"))
-                                {
-                                    String email = document.getId();
-                                    String name = document.getData().get("Name").toString();
-                                    String hours = document.getData().get("HoursWorked").toString();
-                                    int key = 0;
-                                    Emails.add(email);
-                                    Hours.add(hours);
-                                    Keys.add(key);
-                                    Names.add(name);
-                                }
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            if (document.getData().get("isAdmin").toString().equals("0"))
+                            {
+                                String email = document.getId();
+                                String name = document.getData().get("Name").toString();
+                                String hours = document.getData().get("HoursWorked").toString();
+                                int temphours = Integer.parseInt(hours);
+                                int key = 0;
+                                Emails.add(email);
+                                Hours.add(temphours);
+                                Keys.add(key);
+                                Names.add(name);
                             }
-                            System.out.println("After Documents: " + ArgiesDays + "/" + ArgiesMonth);
-                        } else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
                         }
+                        System.out.println("After Documents: " + ArgiesDays + "/" + ArgiesMonth);
+                    } else {
+                        Log.w(TAG, "Error getting documents.", task.getException());
                     }
                 });
 
+        for (j=0;j<Hours.size();j++) {
+                                    for (int y=j+1;y<Hours.size();y++) {
+                                        if (Keys.get(j) > Keys.get(y)) {
+                                            int temphours = Hours.get(j);
+                                            String tempname = Names.get(j);
+                                            String tempemail = Emails.get(j);
+                                            int tempkeys = Keys.get(j);
+
+                                            Hours.set(j, Hours.get(y));
+                                            Hours.set(y, temphours);
+                                            Keys.set(j, Keys.get(y));
+                                            Keys.set(y, tempkeys);
+                                            Names.set(j, Names.get(y));
+                                            Names.set(y, tempname);
+                                            Emails.set(j, Emails.get(y));
+                                            Emails.set(y, tempemail);
+                                        }
+                                    }
+                                }
 
 
 
-            tryouts.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            tryouts.setOnClickListener(view -> {
                 String temp1 = numofdaystext.getText().toString();
                 String temp2 = numofshiftstext.getText().toString();
                 int NumOfDays = Integer.parseInt(temp1);
                 int NumOfShifts = Integer.parseInt(temp2);
+                int workersEachShift = 2;
+                int ArrayLenght = Names.size();
                 for (k=0;k<NumOfDays;k++) {
-                    dates[0] = valueOf(day);
-                    dates[1] = valueOf(month);
-                    String date = dates[0]+"."+dates[1]+"."+dates[2];
-                    int x = Integer.parseInt(dates[0]);
-                    x = x + 1;
-                    String yi = valueOf(x);
-                    dates[0] = yi;
-
                     if (month == 2 && day == 28) {
                         day = 1;
                         month = month + 1;
@@ -165,11 +159,9 @@ public class AdminProgram extends AppCompatActivity {
                         month = 1;
                     }
 
-                    if (day == 1) {
-                        for(i=0;i < Names.size();i++) {
-                            Hours.set(i, "0");
-                        }
-                    }
+                    dates[0] = valueOf(day);
+                    dates[1] = valueOf(month);
+                    String date = dates[0]+"."+dates[1]+"."+dates[2];
 
                     System.out.println(day + "     =>     " + month);
                             boolean flag;
@@ -184,48 +176,42 @@ public class AdminProgram extends AppCompatActivity {
 
                             System.out.println("FLAG  ===>   " + flag);
                             if (!flag) {
-                                System.out.println("Before Shorting: " + Names);
-                                System.out.println("Before Shorting: " + Emails);
-                                System.out.println("Before Shorting: " + Hours);
-                                System.out.println("Before Shorting: " + Keys);
-
-
                                 /// kane Case Switch baze mesa sta case ta HashMaps kai ta Documents meta thn case
 
-                                for (j=0;j<Hours.size();j++) {
-                                    for (int y=j+1;y<Hours.size();y++) {
-                                        if (Keys.get(j) > Keys.get(y)) {
-                                            String temphours = Hours.get(j);
-                                            String tempname = Names.get(j);
-                                            String tempemail = Emails.get(j);
-                                            int tempkeys = Keys.get(j);
-
-                                            Hours.set(j, Hours.get(y));
-                                            Hours.set(y, temphours);
-                                            Keys.set(j, Keys.get(y));
-                                            Keys.set(y, tempkeys);
-                                            Names.set(j, Names.get(y));
-                                            Names.set(y, tempname);
-                                            Emails.set(j, Emails.get(y));
-                                            Emails.set(y, tempemail);
-                                        }
-                                    }
-                                }
-                                int megethosAtomon = Names.size();
-                                int pyliko = megethosAtomon / NumOfShifts;
-                                int remainder = megethosAtomon % NumOfShifts;
-                                int counter = 0;
-                                i = 0;
-                                while (megethosAtomon > i) {
-
-                                        // shift(i) = atomo(i)
-                                    if(megethosAtomon - pyliko < counter)
-                                        // shift(i) = atomo (i)
-                                        // FlagAtomo(i) = true
-
-                                    counter++;
-                                    i++;
-                                }
+//                                for (j=0;j<Hours.size();j++) {
+//                                    for (int y=j+1;y<Hours.size();y++) {
+//                                        if (Keys.get(j) > Keys.get(y)) {
+//                                            int temphours = Hours.get(j);
+//                                            String tempname = Names.get(j);
+//                                            String tempemail = Emails.get(j);
+//                                            int tempkeys = Keys.get(j);
+//
+//                                            Hours.set(j, Hours.get(y));
+//                                            Hours.set(y, temphours);
+//                                            Keys.set(j, Keys.get(y));
+//                                            Keys.set(y, tempkeys);
+//                                            Names.set(j, Names.get(y));
+//                                            Names.set(y, tempname);
+//                                            Emails.set(j, Emails.get(y));
+//                                            Emails.set(y, tempemail);
+//                                        }
+//                                    }
+//                                }
+//                                int megethosAtomon = Names.size();
+//                                int pyliko = megethosAtomon / NumOfShifts;
+//                                int remainder = megethosAtomon % NumOfShifts;
+//                                int counter = 0;
+//                                i = 0;
+//                                while (megethosAtomon > i) {
+//
+//                                        // shift(i) = atomo(i)
+//                                    if(megethosAtomon - pyliko < counter)
+//                                        // shift(i) = atomo (i)
+//                                        // FlagAtomo(i) = true
+//
+//                                    counter++;
+//                                    i++;
+//                                }
 
                                 System.out.println("After Shorting: " + Names);
                                 System.out.println("After Shorting: " + Emails);
@@ -233,38 +219,67 @@ public class AdminProgram extends AppCompatActivity {
                                 System.out.println("After Shorting: " + Keys);
                                 Map<String, Object> ShiftsMap = new HashMap<>();
 
-                                for (i=0;i<NumOfShifts;i++){
-                                    //for j < atomabardies.size()
-                                    DocumentReference UserHours = fStore.collection("Users").document(Emails.get(i));
-                                    int prosthesi = Integer.parseInt(Hours.get(i));
-                                    Map<String, Object> UserHoursMap = new HashMap<>();
-                                    prosthesi = prosthesi + 8;
-                                    String prosth = valueOf(prosthesi);
-                                    UserHoursMap.put("HoursWorked", prosth);
-                                    Hours.set(i, prosth);
-                                    Keys.set(i, Keys.get(i) + 1);
-                                    System.out.println("Shift =>  " + i + " =>  Tha doyleppsei =>  " + Names.get(i) + " Stis =>  " + date);
+                                int counter = 0;
+                                int anticounter = Names.size() - 1;
+                                for (i = 0 ;i < NumOfShifts ; i++){
+
+                                    StringBuilder NamesForShifts = new StringBuilder();
+
+                                    for (j = 0 ; j < workersEachShift ; j++) {
+                                        if (j < workersEachShift) {
+                                            NamesForShifts.append(Names.get(counter)).append(", ");
+                                        } else {
+                                            NamesForShifts.append(Names.get(counter));
+                                        }
+
+                                        Hours.set(counter, Hours.get(counter) + 8);
+                                        Keys.set(counter, Keys.get(counter) + 1);
+                                        System.out.println("Shift =>  " + i + " =>  Tha doyleppsei =>  " + Names.get(counter) + " Stis =>  " + date);
+
+                                        int temphours = Hours.get(counter);
+                                        String tempname = Names.get(counter);
+                                        String tempemail = Emails.get(counter);
+                                        int tempkeys = Keys.get(counter);
+
+                                        Hours.set(counter, Hours.get(anticounter));
+                                        Hours.set(anticounter, temphours);
+                                        Keys.set(counter, Keys.get(anticounter));
+                                        Keys.set(anticounter, tempkeys);
+                                        Names.set(counter, Names.get(anticounter));
+                                        Names.set(anticounter, tempname);
+                                        Emails.set(counter, Emails.get(anticounter));
+                                        Emails.set(anticounter, tempemail);
+                                        counter = counter + 1;
+                                        anticounter = anticounter - 1;
+
+                                    }
                                     int map = i+1;
-                                    ShiftsMap.put("Shift"+ map, Names.get(i));
-                                    System.out.println("ShiftsMap:  =>    " + ShiftsMap);
-                                    UserHours.update(UserHoursMap);
+                                    String finalNames = NamesForShifts.toString();
+                                    ShiftsMap.put("Shift"+ map, finalNames);
                                 }
-                                DocumentReference dates = fStore.collection("Program").document(date);
-                                dates.set(ShiftsMap);
+                                DocumentReference dates1 = fStore.collection("Program").document(date);
+                                dates1.set(ShiftsMap);
                             }else{
                                 Map<String, Object> ShiftsMap = new HashMap<>();
-                                DocumentReference dates = fStore.collection("Program").document(date);
-                                ShiftsMap.put("H Zwh", "Einai wrea REPO!");
-                                dates.set(ShiftsMap);
+                                DocumentReference dates1 = fStore.collection("Program").document(date);
+                                ShiftsMap.put("Argia", "Den doulevei kaneis");
+                                dates1.set(ShiftsMap);
                             }
                     day = day + 1;
+                }
+                for (i=0;i<Names.size();i++) {
+                    DocumentReference UserHours = fStore.collection("Users").document(Emails.get(i));
+                    Map<String, Object> UserHoursMap = new HashMap<>();
+                    UserHoursMap.put("HoursWorked", Hours.get(i));
+                    UserHours.update(UserHoursMap);
+                    System.out.println("Maps =>   " + UserHoursMap);
                 }
                 System.out.println("After Placing Shifts: " + Names);
                 System.out.println("After Placing Shifts: " + Emails);
                 System.out.println("After Placing Shifts: " + Hours);
                 System.out.println("After Placing Shifts: " + Keys);
-            }
-        });
+            });
+
     }
 }
 
