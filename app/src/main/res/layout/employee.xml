@@ -37,7 +37,7 @@
         android:layout_marginTop="1dp"
         android:layout_marginBottom="108dp"
         android:background="@color/bluelight"
-        android:text="Search"
+        android:text="@string/search"
         android:textColor="#C4C4C4"
         android:textSize="24sp"
         android:textStyle="bold"

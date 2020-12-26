@@ -10,7 +10,7 @@
         android:id="@+id/textView10"
         android:layout_width="200dp"
         android:layout_height="39dp"
-        android:text="Admin Sign Up"
+        android:text="@string/sign_up_AdminL"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#C4C4C4"
         android:textSize="30sp"
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="E-mail"
+        android:hint="@string/email"
         android:inputType="textPersonName"
         android:textColor="#C4C4C4"
         android:textColorHint="#C4C4C4"
@@ -35,14 +35,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.988" />
+        app:layout_constraintVertical_bias="0.988"
+        android:autofillHints="email" />
 
     <EditText
         android:id="@+id/editTextTextPersonName8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPersonName"
         android:textColorHint="#C4C4C4"
         android:textStyle="bold"
@@ -51,13 +52,14 @@
         app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.992" />
+        app:layout_constraintVertical_bias="0.992"
+        android:autofillHints="password" />
 
     <CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="184dp"
         android:layout_height="40dp"
-        android:text="I'm not a Robot"
+        android:text="@string/im_not_a_robot"
         android:textColor="#C4C4C4"
         android:textStyle="bold"
         app:buttonTint="#C4C4C4"
@@ -71,7 +73,7 @@
         android:id="@+id/button12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:textColor="#C4C4C4"
         android:textStyle="bold"
         app:backgroundTint="#000000"
@@ -86,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint=" Re-enter Password"
+        android:hint="@string/re_enter_password"
         android:inputType="textPersonName"
         android:textColorHint="#C4C4C4"
         android:textColorLink="#C4C4C4"
@@ -96,7 +98,8 @@
         app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.876" />
+        app:layout_constraintVertical_bias="0.876"
+        android:autofillHints="re enter password" />
 
     <TextView
         android:id="@+id/textView18"

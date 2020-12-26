@@ -13,7 +13,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="56dp"
         android:layout_marginBottom="115dp"
-        android:text="Sign In"
+        android:text="@string/sign_in_as_user"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#C4C4C4"
         android:textSize="30sp"
@@ -28,7 +28,7 @@
         android:id="@+id/button20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log IN"
+        android:text="@string/sign_in_as_user"
         android:textColor="#C4C4C4"
         android:textColorHint="#FAF6F6"
         android:textStyle="bold"
@@ -47,7 +47,7 @@
         android:layout_height="33dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="236dp"
-        android:text="Keep me signed in"
+        android:text="@string/keep_me_signed_in"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#C4C4C4"
         android:textColorHint="#E1E1E1"
@@ -67,13 +67,14 @@
         android:layout_marginTop="20dp"
         android:background="@color/dark"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:textColorHint="#C4C4C4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email1" />
+        app:layout_constraintTop_toBottomOf="@+id/Email1"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/Email1"
@@ -82,13 +83,14 @@
         android:layout_marginTop="220dp"
         android:background="@color/dark"
         android:ems="10"
-        android:hint="E-mail"
-        android:inputType="textPersonName"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:textColorHint="#C4C4C4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -104,6 +106,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/application" />
+        app:srcCompat="@drawable/application"
+        android:contentDescription="@string/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

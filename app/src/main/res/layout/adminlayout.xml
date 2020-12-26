@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
             android:background="@color/teal_200"
-            android:text="logout"
+            android:text="@string/log_out"
             android:textColor="@color/dark"
             android:textSize="18sp"
             app:backgroundTint="@color/teal_200"
@@ -41,7 +41,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="Admin"
+            android:text="@string/admin"
             android:textColor="@color/teal_200"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -76,7 +76,8 @@
                 android:background="@color/moredark"
                 android:clickable="true"
                 android:visibility="visible"
-                tools:visibility="visible">
+                tools:visibility="visible"
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/textView3"
@@ -85,7 +86,7 @@
                     android:layout_below="@id/calendar"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:text="Calendar"
+                    android:text="@string/calendar"
                     android:textColor="@color/teal_200"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -97,7 +98,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="@color/moredark"
-                    app:srcCompat="@drawable/calendar" />
+                    app:srcCompat="@drawable/calendar"
+                    android:contentDescription="@string/calendarlogo" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -114,7 +116,8 @@
                 android:background="@color/moredark"
                 android:clickable="true"
                 android:visibility="visible"
-                tools:visibility="visible">
+                tools:visibility="visible"
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/textView4"
@@ -123,7 +126,7 @@
                     android:layout_below="@id/imageView3"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:text="Employees"
+                    android:text="@string/employees"
                     android:textColor="#C4C4C4"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -135,7 +138,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="@color/moredark"
-                    app:srcCompat="@drawable/team" />
+                    app:srcCompat="@drawable/team"
+                    android:contentDescription="@string/employeelogo" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -171,7 +175,7 @@
                     android:layout_below="@id/Finance"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:text="Finance"
+                    android:text="@string/finance"
                     android:textColor="#C4C4C4"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -183,7 +187,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="@color/moredark"
-                    app:srcCompat="@drawable/safe" />
+                    app:srcCompat="@drawable/safe"
+                    android:contentDescription="@string/financelogo" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -206,7 +211,7 @@
                     android:layout_below="@id/chat"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:text="To Do List"
+                    android:text="@string/to_do_list"
                     android:textColor="#C4C4C4"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -218,7 +223,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:background="@color/moredark"
-                    app:srcCompat="@drawable/note" />
+                    app:srcCompat="@drawable/note"
+                    android:contentDescription="@string/todologo" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
