@@ -17,7 +17,7 @@
         android:layout_marginRight="133dp"
         android:layout_marginBottom="528dp"
         android:gravity="center"
-        android:text="Program"
+        android:text="@string/program"
         android:textColor="@color/teal_200"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -38,6 +38,7 @@
         android:layout_marginEnd="99dp"
         android:layout_marginRight="99dp"
         android:layout_marginBottom="471dp"
+        android:hint="@string/date"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:importantForAutofill="no"
@@ -55,12 +56,13 @@
         android:layout_height="60dp"
         android:layout_marginBottom="36dp"
         android:backgroundTint="@color/teal_200"
-        android:text="Set Program"
+        android:text="@string/setprogram"
         android:textColor="@color/dark"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
 
     <TextView
         android:id="@+id/textView8"
@@ -69,7 +71,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="68dp"
-        android:text="Shifts"
+        android:text="@string/shifts"
         android:textColor="@color/teal_200"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +84,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="50dp"
-        android:text="Days"
+        android:text="@string/days"
         android:textColor="@color/teal_200"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Work On Weekend"
+        android:text="@string/workonweekend"
         android:textColor="@color/teal_200"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,13 +125,15 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:hint="@string/numofshifts"
         android:ems="10"
         android:inputType="number"
         android:singleLine="false"
         android:textColor="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:autofillHints="@string/hints" />
 
     <EditText
         android:id="@+id/NumOfDays"
@@ -139,11 +143,13 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:hint="@string/numofdays"
         android:ems="10"
         android:inputType="number"
         android:textColor="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NumOfShifts"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:autofillHints="@string/hints"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@
         android:layout_marginBottom="430dp"
         android:background="@drawable/circlebackground"
         android:gravity="center"
-        android:text="@string/x"
+        android:text="@string/close"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
-            android:text="@string/washington_us"
+            android:text="@string/washingtonus"
             android:textColor="@color/white" />
     </LinearLayout>
 
@@ -187,6 +187,7 @@
         app:layout_constraintVertical_bias="0.94"
         tools:ignore="MissingConstraints" />
 
+    <!--suppress AndroidMissingOnClickHandler -->
     <Button
         android:id="@+id/previous_user"
         android:layout_width="wrap_content"
@@ -202,6 +203,7 @@
         app:layout_constraintVertical_bias="0.94"
         tools:ignore="MissingConstraints" />
 
+    <!--suppress AndroidMissingOnClickHandler -->
     <Button
         android:id="@+id/next_user"
         android:layout_width="wrap_content"

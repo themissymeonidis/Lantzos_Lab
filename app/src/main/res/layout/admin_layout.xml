@@ -99,7 +99,7 @@
                     android:layout_marginTop="15dp"
                     android:background="@color/moredark"
                     app:srcCompat="@drawable/calendar"
-                  />
+                    android:contentDescription="@string/todologo" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -139,7 +139,7 @@
                     android:layout_marginTop="15dp"
                     android:background="@color/moredark"
                     app:srcCompat="@drawable/team"
-                    />
+                    android:contentDescription="@string/todologo" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -188,7 +188,7 @@
                     android:layout_marginTop="15dp"
                     android:background="@color/moredark"
                     app:srcCompat="@drawable/safe"
-                    />
+                    android:contentDescription="@string/todologo" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 

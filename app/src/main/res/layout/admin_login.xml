@@ -11,7 +11,7 @@
         android:layout_width="109dp"
         android:layout_height="53dp"
         android:layout_marginTop="50dp"
-        android:text="Sign In"
+        android:text="@string/admin_login"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#C4C4C4"
         android:textSize="30sp"
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
-        android:text="Log IN"
+        android:text="@string/log_in"
         android:textColor="@color/dark"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -43,7 +43,7 @@
         android:layout_width="203dp"
         android:layout_height="23dp"
         android:layout_marginBottom="52dp"
-        android:text="Keep me signed in"
+        android:text="@string/keep_me_signed_in"
         android:textColor="#C4C4C4"
         android:textStyle="bold"
         app:buttonTint="#C4C4C4"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:textColor="#C4C4C4"
         android:textColorHint="#C4C4C4"
@@ -69,14 +69,15 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/Email2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="E-mail"
+        android:hint="@string/email"
         android:inputType="textPersonName"
         android:textColor="#FBFBFB"
         android:textColorHint="#C4C4C4"
@@ -85,7 +86,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35000002" />
+        app:layout_constraintVertical_bias="0.35000002"
+        tools:ignore="TextFields"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/logoAdminLogin"
@@ -97,6 +100,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.092"
-        app:srcCompat="@drawable/application" />
+        app:srcCompat="@drawable/application"
+        android:contentDescription="@string/todologo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
