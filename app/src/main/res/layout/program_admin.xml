@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:text="@string/days"
         android:textColor="@color/teal_200"
         android:textSize="30sp"
@@ -91,31 +91,69 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/workonweekend"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/workers"
         android:textColor="@color/teal_200"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NumOfDays" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/saterday"
+        android:textColor="@color/teal_200"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/sunday"
+        android:textColor="@color/teal_200"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:id="@+id/Sunday_Checkbox"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
         android:textColor="@color/teal_200"
         android:textColorHighlight="@color/teal_200"
         android:textColorHint="@color/dark"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/saturday_Checkbox" />
+
+    <CheckBox
+        android:id="@+id/saturday_Checkbox"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/teal_200"
+        android:textColorHighlight="@color/teal_200"
+        android:textColorHint="@color/dark"
         app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/NumOfDays" />
+        app:layout_constraintTop_toBottomOf="@+id/NumOfWorkers" />
 
     <EditText
         android:id="@+id/NumOfShifts"
@@ -138,18 +176,35 @@
     <EditText
         android:id="@+id/NumOfDays"
         android:layout_width="wrap_content"
-        android:textAlignment="center"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
-        android:hint="@string/numofdays"
+        android:autofillHints="@string/hints"
         android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/numofdays"
         android:inputType="number"
+        android:textAlignment="center"
         android:textColor="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NumOfShifts"
+        app:layout_constraintTop_toBottomOf="@+id/NumOfShifts" />
+
+    <EditText
+        android:id="@+id/NumOfWorkers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:autofillHints="@string/hints"
+        android:ems="10"
         android:gravity="center_horizontal"
-        android:autofillHints="@string/hints"/>
+        android:hint="@string/numofdays"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NumOfDays" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

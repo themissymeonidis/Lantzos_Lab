@@ -120,4 +120,8 @@
     <string name="todologo">TodoLogo</string>
     <string name="log_out">Log Out</string>
     <string name ="select_an_employee_to_fire">Select An Employee To Fire</string>
+    <string name="managestaff">Manage Stuff</string>
+    <string name="workers">Workers</string>
+    <string name="sunday">Sunday</string>
+    <string name="saterday">Saturday</string>
 </resources>
