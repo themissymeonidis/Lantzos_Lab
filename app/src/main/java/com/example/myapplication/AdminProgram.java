@@ -6,6 +6,9 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -23,6 +26,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import static java.lang.String.valueOf;
@@ -334,6 +338,27 @@ public class AdminProgram extends AppCompatActivity {
             } else {
                 CurrentDay = 0;
             }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.item1:
+                setContentView(R.layout.aboutus);
+                return true;
+            case R.id.item2:
+                setContentView(R.layout.help);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
 
