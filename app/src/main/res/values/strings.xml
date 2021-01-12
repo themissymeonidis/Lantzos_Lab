@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="login_as">Login as:</string>
-    <string name="admin">Button</string>
-    <string name="user">Button</string>
+    <string name="admin">Admin</string>
+    <string name="user">User</string>
     <string name="password">Password:</string>
     <string name="e_mail">E-mail:</string>
     <string name="sign_in">Sign in</string>
