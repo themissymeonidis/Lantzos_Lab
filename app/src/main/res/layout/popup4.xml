@@ -144,5 +144,78 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="138dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="23dp"
+        android:layout_weight="1"
+        android:background="@color/green"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        tools:ignore="MissingConstraints">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phonenumberexample"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fire_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fire"
+        app:backgroundTint="@color/material_on_background_emphasis_high_type"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next_user"
+        app:layout_constraintStart_toEndOf="@+id/previous_user"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94"
+        tools:ignore="MissingConstraints" />
+
+    <!--suppress AndroidMissingOnClickHandler -->
+    <Button
+        android:id="@+id/previous_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="previous_user"
+        android:text="@string/previous"
+        app:backgroundTint="@color/material_on_background_emphasis_high_type"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94"
+        tools:ignore="MissingConstraints" />
+
+    <!--suppress AndroidMissingOnClickHandler -->
+    <Button
+        android:id="@+id/next_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="next_user2"
+        android:text="@string/next"
+        app:backgroundTint="@color/material_on_background_emphasis_high_type"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
