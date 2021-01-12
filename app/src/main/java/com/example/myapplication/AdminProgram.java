@@ -1,14 +1,23 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
-import android.nfc.Tag;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,15 +26,18 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
-import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.example.myapplication.R.id.parent;
 import static java.lang.String.valueOf;
+import static com.example.myapplication.R.id.after_program;
 
 public class AdminProgram extends AppCompatActivity {
     FirebaseAuth fAuth;
@@ -33,6 +45,10 @@ public class AdminProgram extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     int i, j, k, NumOfShifts, NumOfDays, workersEachShift, counter, CurrentDay;
     public int day, month, year;
+    private PopupWindow popupWindow;
+    private LayoutInflater layoutInflater;
+    public StringBuilder lista;
+    ArrayAdapter<String> adapter;
     String[] dates;
     String date;
     Map<String, Object> ShiftsMap = new HashMap<>();
@@ -46,12 +62,21 @@ public class AdminProgram extends AppCompatActivity {
     ArrayList<Integer> Keys = new ArrayList<>();
     ArrayList<String> ArgiesMonth = new ArrayList<>();
     ArrayList<String> ArgiesDays = new ArrayList<>();
+    ArrayList<String> after_program_list = new ArrayList<>();
+    Dialog MyDialog;
+
+    private PopupWindow popupWindow2;
+    private LayoutInflater layoutInflater2;
+    ListView after_program_dil;
+    String[] local = {""};
 
     @SuppressLint("SetTextI18n")
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.program_admin);
+        MyDialog = new Dialog(this);
 
         WorkSaturday = findViewById(R.id.saturday_Checkbox);
         WorkSunday = findViewById(R.id.Sunday_Checkbox);
@@ -64,6 +89,7 @@ public class AdminProgram extends AppCompatActivity {
         String themis = intent.getExtras().getString("epuzzle");
 
 
+        lista = new StringBuilder();
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -143,7 +169,10 @@ public class AdminProgram extends AppCompatActivity {
         }
 
 
-            tryouts.setOnClickListener(view -> {
+        tryouts.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ServiceCast")
+            @Override
+            public void onClick(View view) {
                 if(TextUtils.isEmpty(numofdaystext.getText().toString())){
                     numofdaystext.setError("Email is Required");
                     return;
@@ -171,6 +200,16 @@ public class AdminProgram extends AppCompatActivity {
                     Toast.makeText(AdminProgram.this, "Everyone Will Work Each Day", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                layoutInflater = (LayoutInflater) getApplication().getSystemService(LAYOUT_INFLATER_SERVICE);
+                ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.admin_program_popup, null);
+
+                popupWindow = new PopupWindow(container, 850, 1400, true);
+                popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+                after_program_dil = container.findViewById(after_program);
+                Collections.addAll(after_program_list,local);
+                after_program_list.remove(after_program_list.get(0));
+                adapter = new ArrayAdapter<>(AdminProgram.this, android.R.layout.simple_list_item_1, after_program_list);
+
                 for (k=0;k<NumOfDays;k++) {
                     int switcher = 0;
                     SetDate();
@@ -209,6 +248,7 @@ public class AdminProgram extends AppCompatActivity {
                         case 2:
                             dates1 = fStore.collection("Program").document(date);
                             ShiftsMap.put("Argia", "Den doulevei kaneis");
+                            lista.append(date + " ---> Argia");
                             dates1.set(ShiftsMap);
                             break;
 
@@ -217,6 +257,7 @@ public class AdminProgram extends AppCompatActivity {
                             if (CurrentDay == 1) {
                                 dates1 = fStore.collection("Program").document(date);
                                 ShiftsMap.put("Saturday", "Off");
+                                lista.append(date + " ---> Saturday Off\n");
                             } else {
                                 GiveMap();
                                 System.out.println(ShiftsMap);
@@ -229,6 +270,7 @@ public class AdminProgram extends AppCompatActivity {
                             if (CurrentDay == 2) {
                                 dates1 = fStore.collection("Program").document(date);
                                 ShiftsMap.put("Sunday", "Off");
+                                lista.append(date + " ---> Sunday Off \n");
                             } else {
                                 GiveMap();
                                 System.out.println(ShiftsMap);
@@ -241,9 +283,11 @@ public class AdminProgram extends AppCompatActivity {
                             if (CurrentDay == 2) {
                                 dates1 = fStore.collection("Program").document(date);
                                 ShiftsMap.put("Sunday", "Off");
+                                lista.append(date + " ---> Sunday Off\n");
                             } else if (CurrentDay == 1) {
                                 dates1 = fStore.collection("Program").document(date);
                                 ShiftsMap.put("Saturday", "Off");
+                                lista.append(date + " ---> Saturday Off\n");
                             } else {
                                 GiveMap();
                                 System.out.println(ShiftsMap);
@@ -252,8 +296,10 @@ public class AdminProgram extends AppCompatActivity {
                             dates1.set(ShiftsMap);
                             break;
                     }
+                    NumOfShifts = Integer.parseInt(temp2);
                     day = day + 1;
                 }
+                System.out.println(lista);
                 for (i=0;i<Names.size();i++) {
                     DocumentReference UserHours = fStore.collection("Users").document(Emails.get(i));
                     Map<String, Object> UserHoursMap = new HashMap<>();
@@ -265,10 +311,25 @@ public class AdminProgram extends AppCompatActivity {
                 System.out.println("After Placing Shifts: " + Emails);
                 System.out.println("After Placing Shifts: " + Hours);
                 System.out.println("After Placing Shifts: " + Keys);
-            });
 
+                after_program_dil.setAdapter(adapter);
+                popupWindow.showAsDropDown(tryouts);
+                container.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+                        ((PopupWindow) popupWindow).dismiss();
+                        startActivity(new Intent(getApplicationContext(),AdminCalendar.class));
+                        return false;
+                    }
+                });
+            }});
     }
+
+
+
+
     public void GiveMap() {
+        StringBuilder abc = new StringBuilder();
         for (i=0 ; i<NumOfShifts; i++) {
             StringBuilder NamesForShifts = new StringBuilder();
             for(j=0;j<workersEachShift;j++) {
@@ -288,7 +349,12 @@ public class AdminProgram extends AppCompatActivity {
             int map = i+1;
             String finalNames = NamesForShifts.toString();
             ShiftsMap.put("Shift"+ map, finalNames);
+            abc.append("{ Shift " + map + " : " + finalNames + " } \n");
         }
+        lista.append(date + "\n" + abc + "\n");
+        after_program_list.add(date + "\n" + abc + "\n");
+        adapter.notifyDataSetChanged();
+
     }
     public void SetDate() {
         if (month == 2 && day == 28) {
@@ -336,4 +402,3 @@ public class AdminProgram extends AppCompatActivity {
             }
     }
 }
-

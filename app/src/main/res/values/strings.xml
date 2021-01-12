@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="login_as">Login as:</string>
-    <string name="admin">Button</string>
-    <string name="user">Button</string>
+    <string name="admin">Admin</string>
+    <string name="user">User</string>
     <string name="password">Password:</string>
     <string name="e_mail">E-mail:</string>
     <string name="sign_in">Sign in</string>
@@ -75,7 +75,7 @@
     <string name="numofshifts">Number of Shifts</string>
     <string name="numofdays">Number of Days</string>
     <string name="next">Next</string>
-    <string name="program">Program</string>
+    <string name="program1">Program</string>
     <string name="date">Date</string>
     <string name="setprogram">Set Program</string>
     <string name="income">Income:</string>
@@ -124,4 +124,5 @@
     <string name="workers">Workers</string>
     <string name="sunday">Sunday</string>
     <string name="saterday">Saturday</string>
+    <string name="program">Program</string>
 </resources>
