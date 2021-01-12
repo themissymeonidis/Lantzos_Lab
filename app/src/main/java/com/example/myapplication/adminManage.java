@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -97,8 +98,8 @@ public class adminManage extends AppCompatActivity {
                 layoutInflater = (LayoutInflater) getApplication().getSystemService(LAYOUT_INFLATER_SERVICE);
                 ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.admin_popup, null);
 
-                popupWindow = new PopupWindow(container, 1000, 2000, true);
-                //popupWindow.showAtLocation(layout, Gravity.BOTTOM, 10, 10);
+                popupWindow = new PopupWindow(container, 850, 1400, true);
+                popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
                 lst = container.findViewById(lv1);
                 arrayList = new ArrayList<>();
                 Collections.addAll(arrayList,local);

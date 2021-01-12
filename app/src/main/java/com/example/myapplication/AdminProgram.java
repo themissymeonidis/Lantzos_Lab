@@ -7,7 +7,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -33,6 +35,7 @@ import java.util.Map;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.example.myapplication.R.id.parent;
 import static java.lang.String.valueOf;
 import static com.example.myapplication.R.id.after_program;
 
@@ -200,8 +203,8 @@ public class AdminProgram extends AppCompatActivity {
                 layoutInflater = (LayoutInflater) getApplication().getSystemService(LAYOUT_INFLATER_SERVICE);
                 ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.admin_program_popup, null);
 
-                popupWindow = new PopupWindow(container, 1000, 2000, true);
-                //popupWindow.showAtLocation(layout, Gravity.BOTTOM, 10, 10);
+                popupWindow = new PopupWindow(container, 850, 1400, true);
+                popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
                 after_program_dil = container.findViewById(after_program);
                 Collections.addAll(after_program_list,local);
                 after_program_list.remove(after_program_list.get(0));
@@ -311,6 +314,14 @@ public class AdminProgram extends AppCompatActivity {
 
                 after_program_dil.setAdapter(adapter);
                 popupWindow.showAsDropDown(tryouts);
+                container.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+                        ((PopupWindow) popupWindow).dismiss();
+                        startActivity(new Intent(getApplicationContext(),AdminCalendar.class));
+                        return false;
+                    }
+                });
             }});
     }
 

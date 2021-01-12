@@ -75,7 +75,7 @@
     <string name="numofshifts">Number of Shifts</string>
     <string name="numofdays">Number of Days</string>
     <string name="next">Next</string>
-    <string name="program">Program</string>
+    <string name="program1">Program</string>
     <string name="date">Date</string>
     <string name="setprogram">Set Program</string>
     <string name="income">Income:</string>
@@ -124,4 +124,5 @@
     <string name="workers">Workers</string>
     <string name="sunday">Sunday</string>
     <string name="saterday">Saturday</string>
+    <string name="program">Program</string>
 </resources>
