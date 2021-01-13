@@ -187,36 +187,3 @@
         app:layout_constraintVertical_bias="0.94"
         tools:ignore="MissingConstraints" />
 
-  yout.widget.ConstraintLayout>
-    <!--suppress AndroidMissingOnClickHandler -->
-    <Button
-        android:id="@+id/previous_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="previous_user"
-        android:text="@string/previous"
-        app:backgroundTint="@color/material_on_background_emphasis_high_type"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
-        tools:ignore="MissingConstraints" />
-
-    <!--suppress AndroidMissingOnClickHandler -->
-    <Button
-        android:id="@+id/next_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="next_user2"
-        android:text="@string/next"
-        app:backgroundTint="@color/material_on_background_emphasis_high_type"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.94"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
