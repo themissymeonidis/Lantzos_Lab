@@ -187,6 +187,7 @@
         app:layout_constraintVertical_bias="0.94"
         tools:ignore="MissingConstraints" />
 
+  yout.widget.ConstraintLayout>
     <!--suppress AndroidMissingOnClickHandler -->
     <Button
         android:id="@+id/previous_user"
