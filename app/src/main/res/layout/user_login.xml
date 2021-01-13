@@ -9,9 +9,9 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="107dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="121dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
         android:text="@string/user_login"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#C4C4C4"

@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="109dp"
-        android:layout_height="53dp"
+        android:layout_width="130dp"
+        android:layout_height="83dp"
         android:layout_marginTop="50dp"
         android:text="@string/admin_login"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
